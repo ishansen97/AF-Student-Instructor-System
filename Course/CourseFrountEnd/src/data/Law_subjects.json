@@ -1,0 +1,432 @@
+[
+  {
+    "year": 1,
+    "semester": 1,
+    "specialization": "LLB",
+    "subjects": [
+      {
+        "id": "LL001",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "LL002",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "LL003",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "LL004",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 1,
+    "semester": 2,
+    "specialization": "LLB",
+    "subjects": [
+      {
+        "id": "LL005",
+        "name": "Programming To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "LL006",
+        "name": "Psychology Training of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "LL007",
+        "name": "Practical Sessions in Fasrin and MotorBikes",
+        "credits": 4.0
+      },
+      {
+        "id": "LL008",
+        "name": "Execution Of Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 2,
+    "semester": 1,
+    "specialization": "LLB",
+    "subjects": [
+      {
+        "id": "LL009",
+        "name": "Introduction To Sohan",
+        "credits": 3.0
+      },
+      {
+        "id": "LL010",
+        "name": "Psychology of Ishan",
+        "credits": 3.0
+      },
+      {
+        "id": "LL011",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 2,
+    "semester": 2,
+    "specialization": "LLB",
+    "subjects": [
+      {
+        "id": "LL013",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "LL014",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "LL015",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 4.0
+      },
+      {
+        "id": "LL016",
+        "name": "Introduction To Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 3,
+    "semester": 1,
+    "specialization": "LLB",
+    "subjects": [
+      {
+        "id": "LL017",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "LL018",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "LL019",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "LL020",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 3,
+    "semester": 2,
+    "specialization": "LLB",
+    "subjects": [
+      {
+        "id": "LL021",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "LL022",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+
+      {
+        "id": "LL024",
+        "name": "Introduction To Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 4,
+    "semester": 1,
+    "specialization": "LLB",
+    "subjects": [
+      {
+        "id": "LL025",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "LL026",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "LL027",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "LL028",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 4,
+    "semester": 2,
+    "specialization": "LLB",
+    "subjects": [
+      {
+        "id": "LL029",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "LL030",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "LL031",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "LL032",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+
+  {
+    "year": 1,
+    "semester": 1,
+    "specialization": "Psychology",
+    "subjects": [
+      {
+        "id": "PY001",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "PY002",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "PY003",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "PY004",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 1,
+    "semester": 2,
+    "specialization": "Psychology",
+    "subjects": [
+      {
+        "id": "PY005",
+        "name": "Programming To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "PY006",
+        "name": "Psychology Training of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "PY007",
+        "name": "Practical Sessions in Fasrin and MotorBikes",
+        "credits": 4.0
+      },
+      {
+        "id": "PY008",
+        "name": "Execution Of Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 2,
+    "semester": 1,
+    "specialization": "Psychology",
+    "subjects": [
+      {
+        "id": "PY009",
+        "name": "Introduction To Sohan",
+        "credits": 3.0
+      },
+      {
+        "id": "PY010",
+        "name": "Psychology of Ishan",
+        "credits": 3.0
+      },
+      {
+        "id": "PY011",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 2,
+    "semester": 2,
+    "specialization": "Psychology",
+    "subjects": [
+      {
+        "id": "PY013",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "PY014",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "PY015",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 4.0
+      },
+      {
+        "id": "PY016",
+        "name": "Introduction To Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 3,
+    "semester": 1,
+    "specialization": "Psychology",
+    "subjects": [
+      {
+        "id": "PY017",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "PY018",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "PY019",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "PY020",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 3,
+    "semester": 2,
+    "specialization": "Psychology",
+    "subjects": [
+      {
+        "id": "PY021",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "PY022",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+
+      {
+        "id": "PY024",
+        "name": "Introduction To Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 4,
+    "semester": 1,
+    "specialization": "Psychology",
+    "subjects": [
+      {
+        "id": "PY025",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "PY026",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "PY027",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "PY028",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 4,
+    "semester": 2,
+    "specialization": "Psychology",
+    "subjects": [
+      {
+        "id": "PY029",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "PY030",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "PY031",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "PY032",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  }
+]

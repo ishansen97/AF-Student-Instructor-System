@@ -1,0 +1,442 @@
+[
+  {
+    "year": 1,
+    "semester": 1,
+    "specialization": "Civil",
+    "subjects": [
+      {
+        "id": "CI001",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "CI002",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "CI003",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "CI004",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 1,
+    "semester": 2,
+    "specialization": "Civil",
+    "subjects": [
+      {
+        "id": "CI005",
+        "name": "Programming To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "CI006",
+        "name": "Psychology Training of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "CI007",
+        "name": "Practical Sessions in Fasrin and MotorBikes",
+        "credits": 4.0
+      },
+      {
+        "id": "CI008",
+        "name": "Execution Of Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 2,
+    "semester": 1,
+    "specialization": "Civil",
+    "subjects": [
+      {
+        "id": "CI009",
+        "name": "Introduction To Sohan",
+        "credits": 3.0
+      },
+      {
+        "id": "CI010",
+        "name": "Psychology of Ishan",
+        "credits": 3.0
+      },
+      {
+        "id": "CI011",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "CI012",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 2,
+    "semester": 2,
+    "specialization": "Civil",
+    "subjects": [
+      {
+        "id": "CI013",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "CI014",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "CI015",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 4.0
+      },
+      {
+        "id": "CI016",
+        "name": "Introduction To Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 3,
+    "semester": 1,
+    "specialization": "Civil",
+    "subjects": [
+      {
+        "id": "CI017",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "CI018",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "CI019",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "CI020",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 3,
+    "semester": 2,
+    "specialization": "Civil",
+    "subjects": [
+      {
+        "id": "CI021",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "CI022",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "CI023",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 4.0
+      },
+      {
+        "id": "CI024",
+        "name": "Introduction To Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 4,
+    "semester": 1,
+    "specialization": "Civil",
+    "subjects": [
+      {
+        "id": "CI025",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "CI026",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "CI027",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "CI028",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 4,
+    "semester": 2,
+    "specialization": "Civil",
+    "subjects": [
+      {
+        "id": "CI029",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "CI030",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "CI031",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "CI032",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+
+  {
+    "year": 1,
+    "semester": 1,
+    "specialization": "Mechanic",
+    "subjects": [
+      {
+        "id": "ME001",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "ME002",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "ME003",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "ME004",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 1,
+    "semester": 2,
+    "specialization": "Mechanic",
+    "subjects": [
+      {
+        "id": "ME005",
+        "name": "Programming To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "ME006",
+        "name": "Psychology Training of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "ME007",
+        "name": "Practical Sessions in Fasrin and MotorBikes",
+        "credits": 4.0
+      },
+      {
+        "id": "ME008",
+        "name": "Execution Of Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 2,
+    "semester": 1,
+    "specialization": "Mechanic",
+    "subjects": [
+      {
+        "id": "ME009",
+        "name": "Introduction To Sohan",
+        "credits": 3.0
+      },
+      {
+        "id": "ME010",
+        "name": "Psychology of Ishan",
+        "credits": 3.0
+      },
+      {
+        "id": "ME011",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 2,
+    "semester": 2,
+    "specialization": "Mechanic",
+    "subjects": [
+      {
+        "id": "ME013",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "ME014",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "ME015",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 4.0
+      },
+      {
+        "id": "ME016",
+        "name": "Introduction To Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 3,
+    "semester": 1,
+    "specialization": "Mechanic",
+    "subjects": [
+      {
+        "id": "ME017",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "ME018",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+      {
+        "id": "ME019",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "ME020",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 3,
+    "semester": 2,
+    "specialization": "Mechanic",
+    "subjects": [
+      {
+        "id": "ME021",
+        "name": "Introduction To Sohan",
+        "credits": 4.0
+      },
+      {
+        "id": "ME022",
+        "name": "Psychology of Ishan",
+        "credits": 4.0
+      },
+
+      {
+        "id": "ME024",
+        "name": "Introduction To Kirul Systems",
+        "credits": 4.0
+      }
+    ]
+  },
+
+  {
+    "year": 4,
+    "semester": 1,
+    "specialization": "Mechanic",
+    "subjects": [
+      {
+        "id": "ME025",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "ME026",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "ME027",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "ME028",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  },
+
+  {
+    "year": 4,
+    "semester": 2,
+    "specialization": "Mechanic",
+    "subjects": [
+      {
+        "id": "ME029",
+        "name": "Introduction To Sohan",
+        "credits": 2.0
+      },
+      {
+        "id": "ME030",
+        "name": "Psychology of Ishan",
+        "credits": 2.0
+      },
+      {
+        "id": "ME031",
+        "name": "Introduction To Fasrin and MotorBikes",
+        "credits": 2.0
+      },
+      {
+        "id": "ME032",
+        "name": "Introduction To Kirul Systems",
+        "credits": 2.0
+      }
+    ]
+  }
+
+]
