@@ -7,14 +7,22 @@
     "app": "^0.1.0",
     "bootstrap": "^4.3.1",
     "express": "^4.17.1",
+    "filepond": "^4.4.9",
+    "filepond-plugin-image-exif-orientation": "^1.0.6",
+    "filepond-plugin-image-preview": "^4.1.0",
     "mongodb": "^3.2.7",
     "mongoose": "^5.5.14",
+    "multer": "^1.4.1",
     "nodemailer": "^6.2.1",
     "nodemon": "^1.19.1",
     "parcel-bundler": "^1.12.3",
     "react": "^16.8.6",
+    "react-calendar": "^2.19.0",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1"
+    "react-filepond": "^7.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-slideshow-image": "^1.1.5",
+    "reactjs-file-uploader": "^1.0.8"
   },
   "devDependencies": {},
   "scripts": {
