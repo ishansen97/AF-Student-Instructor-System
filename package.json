@@ -6,6 +6,7 @@
   "dependencies": {
     "app": "^0.1.0",
     "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
     "bootstrap": "^4.3.1",
     "express": "^4.17.1",
     "filepond": "^4.4.9",

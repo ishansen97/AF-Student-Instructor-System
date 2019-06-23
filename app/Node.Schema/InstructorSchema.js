@@ -57,6 +57,15 @@ const resultsDetailsSchema = new Schema({
 });
 
 
+const assignmentUpload = new Schema(
+    {
+        studentID: String,
+        uploadFile: String,
+        assignmentID: String
+    }
+);
+
+
 //---------------------------------------
 
 const studentDetailsSchema = new Schema(
@@ -244,6 +253,7 @@ mongoose.model('exams' , examDetailsSchema);
 mongoose.model('results' , resultsDetailsSchema);
 
 mongoose.model('courses' , CourseStructure);
+mongoose.model('assignment_upload', assignmentUpload);
 
 mongoose.model('student_details', studentDetailsSchema);
 mongoose.model('student_login', studentLogin);
@@ -254,6 +264,7 @@ mongoose.model('Specialization', specializationSchema);
 mongoose.model('Instructor', instructorSchema);
 mongoose.model('InstructorLogin', instructorSchema);
 mongoose.model('AdminLogin', adminLoginSchema);
+
 
 
 mongoose.connect('mongodb+srv://Ishan:Ishan123@afcluster-ev5ge.mongodb.net/AF_WD_05?retryWrites=true&w=majority' , err =>{
