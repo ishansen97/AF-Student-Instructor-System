@@ -32106,16 +32106,7 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Profile).call(this, props));
     _this.state = {
       show: true,
-      courses: [{
-        id: "SE3010",
-        name: "Application Frameworks"
-      }, {
-        id: "SE3020",
-        name: "Distributed Systems"
-      }, {
-        id: "SE3030",
-        name: "Software Architecture"
-      }]
+      courses: []
     };
     return _this;
   }
@@ -32136,7 +32127,7 @@ function (_Component) {
       }, _react.default.createElement("div", {
         className: "col-sm",
         style: {
-          padding: "25px"
+          padding: "10px"
         }
       }, _react.default.createElement("div", {
         className: "card text-white bg-secondary mb-3"
@@ -32184,36 +32175,7 @@ function (_Component) {
         type: "submit"
       }, "Upload Image")), _react.default.createElement("br", null), _react.default.createElement("button", {
         className: "btn btn-success"
-      }, "Save"))) : null))), _react.default.createElement("div", {
-        className: "col",
-        style: {
-          padding: "15px"
-        }
-      }, _react.default.createElement("div", {
-        className: "card text-white bg-dark mb-3",
-        style: {
-          maxWidth: "60rem"
-        }
-      }, _react.default.createElement("div", {
-        className: "card-header"
-      }, _react.default.createElement("ul", {
-        className: "list-group"
-      }, _react.default.createElement("li", {
-        className: "list-group-item list-group-item-dark text-black-50"
-      }, this.state.courses.map(function (item, i) {
-        return _react.default.createElement(_reactRouterDom.Link, {
-          to: {
-            pathname: "/modules",
-            propName: item.name
-          },
-          className: "nav-link text-white ml-4"
-        }, _react.default.createElement("h4", {
-          key: i,
-          className: "card-header"
-        }, _react.default.createElement("i", {
-          className: "fas fa-book"
-        }, "\xA0\xA0"), item.name));
-      })))))))));
+      }, "Save"))) : null))))));
     }
   }]);
 
@@ -32222,7 +32184,1511 @@ function (_Component) {
 
 var _default = Profile;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./NavBar":"../Interfaces/NavBar.js","./rainbow_book.jpg":"../Interfaces/rainbow_book.jpg"}],"../Interfaces/Courses.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./NavBar":"../Interfaces/NavBar.js","./rainbow_book.jpg":"../Interfaces/rainbow_book.jpg"}],"../node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
+'use strict';
+
+module.exports = function bind(fn, thisArg) {
+  return function wrap() {
+    var args = new Array(arguments.length);
+    for (var i = 0; i < args.length; i++) {
+      args[i] = arguments[i];
+    }
+    return fn.apply(thisArg, args);
+  };
+};
+
+},{}],"../node_modules/axios/node_modules/is-buffer/index.js":[function(require,module,exports) {
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+module.exports = function isBuffer(obj) {
+  return obj != null && obj.constructor != null && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj);
+};
+},{}],"../node_modules/axios/lib/utils.js":[function(require,module,exports) {
+'use strict';
+
+var bind = require('./helpers/bind');
+var isBuffer = require('is-buffer');
+
+/*global toString:true*/
+
+// utils is a library of generic helper functions non-specific to axios
+
+var toString = Object.prototype.toString;
+
+/**
+ * Determine if a value is an Array
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Array, otherwise false
+ */
+function isArray(val) {
+  return toString.call(val) === '[object Array]';
+}
+
+/**
+ * Determine if a value is an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+ */
+function isArrayBuffer(val) {
+  return toString.call(val) === '[object ArrayBuffer]';
+}
+
+/**
+ * Determine if a value is a FormData
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an FormData, otherwise false
+ */
+function isFormData(val) {
+  return (typeof FormData !== 'undefined') && (val instanceof FormData);
+}
+
+/**
+ * Determine if a value is a view on an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+ */
+function isArrayBufferView(val) {
+  var result;
+  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+    result = ArrayBuffer.isView(val);
+  } else {
+    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+  }
+  return result;
+}
+
+/**
+ * Determine if a value is a String
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a String, otherwise false
+ */
+function isString(val) {
+  return typeof val === 'string';
+}
+
+/**
+ * Determine if a value is a Number
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Number, otherwise false
+ */
+function isNumber(val) {
+  return typeof val === 'number';
+}
+
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */
+function isUndefined(val) {
+  return typeof val === 'undefined';
+}
+
+/**
+ * Determine if a value is an Object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Object, otherwise false
+ */
+function isObject(val) {
+  return val !== null && typeof val === 'object';
+}
+
+/**
+ * Determine if a value is a Date
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Date, otherwise false
+ */
+function isDate(val) {
+  return toString.call(val) === '[object Date]';
+}
+
+/**
+ * Determine if a value is a File
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a File, otherwise false
+ */
+function isFile(val) {
+  return toString.call(val) === '[object File]';
+}
+
+/**
+ * Determine if a value is a Blob
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Blob, otherwise false
+ */
+function isBlob(val) {
+  return toString.call(val) === '[object Blob]';
+}
+
+/**
+ * Determine if a value is a Function
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Function, otherwise false
+ */
+function isFunction(val) {
+  return toString.call(val) === '[object Function]';
+}
+
+/**
+ * Determine if a value is a Stream
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Stream, otherwise false
+ */
+function isStream(val) {
+  return isObject(val) && isFunction(val.pipe);
+}
+
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */
+function isURLSearchParams(val) {
+  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+}
+
+/**
+ * Trim excess whitespace off the beginning and end of a string
+ *
+ * @param {String} str The String to trim
+ * @returns {String} The String freed of excess whitespace
+ */
+function trim(str) {
+  return str.replace(/^\s*/, '').replace(/\s*$/, '');
+}
+
+/**
+ * Determine if we're running in a standard browser environment
+ *
+ * This allows axios to run in a web worker, and react-native.
+ * Both environments support XMLHttpRequest, but not fully standard globals.
+ *
+ * web workers:
+ *  typeof window -> undefined
+ *  typeof document -> undefined
+ *
+ * react-native:
+ *  navigator.product -> 'ReactNative'
+ * nativescript
+ *  navigator.product -> 'NativeScript' or 'NS'
+ */
+function isStandardBrowserEnv() {
+  if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' ||
+                                           navigator.product === 'NativeScript' ||
+                                           navigator.product === 'NS')) {
+    return false;
+  }
+  return (
+    typeof window !== 'undefined' &&
+    typeof document !== 'undefined'
+  );
+}
+
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ */
+function forEach(obj, fn) {
+  // Don't bother if no value provided
+  if (obj === null || typeof obj === 'undefined') {
+    return;
+  }
+
+  // Force an array if not already something iterable
+  if (typeof obj !== 'object') {
+    /*eslint no-param-reassign:0*/
+    obj = [obj];
+  }
+
+  if (isArray(obj)) {
+    // Iterate over array values
+    for (var i = 0, l = obj.length; i < l; i++) {
+      fn.call(null, obj[i], i, obj);
+    }
+  } else {
+    // Iterate over object keys
+    for (var key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        fn.call(null, obj[key], key, obj);
+      }
+    }
+  }
+}
+
+/**
+ * Accepts varargs expecting each argument to be an object, then
+ * immutably merges the properties of each object and returns result.
+ *
+ * When multiple objects contain the same key the later object in
+ * the arguments list will take precedence.
+ *
+ * Example:
+ *
+ * ```js
+ * var result = merge({foo: 123}, {foo: 456});
+ * console.log(result.foo); // outputs 456
+ * ```
+ *
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+function merge(/* obj1, obj2, obj3, ... */) {
+  var result = {};
+  function assignValue(val, key) {
+    if (typeof result[key] === 'object' && typeof val === 'object') {
+      result[key] = merge(result[key], val);
+    } else {
+      result[key] = val;
+    }
+  }
+
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+
+/**
+ * Function equal to merge with the difference being that no reference
+ * to original objects is kept.
+ *
+ * @see merge
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+function deepMerge(/* obj1, obj2, obj3, ... */) {
+  var result = {};
+  function assignValue(val, key) {
+    if (typeof result[key] === 'object' && typeof val === 'object') {
+      result[key] = deepMerge(result[key], val);
+    } else if (typeof val === 'object') {
+      result[key] = deepMerge({}, val);
+    } else {
+      result[key] = val;
+    }
+  }
+
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+
+/**
+ * Extends object a by mutably adding to it the properties of object b.
+ *
+ * @param {Object} a The object to be extended
+ * @param {Object} b The object to copy properties from
+ * @param {Object} thisArg The object to bind function to
+ * @return {Object} The resulting value of object a
+ */
+function extend(a, b, thisArg) {
+  forEach(b, function assignValue(val, key) {
+    if (thisArg && typeof val === 'function') {
+      a[key] = bind(val, thisArg);
+    } else {
+      a[key] = val;
+    }
+  });
+  return a;
+}
+
+module.exports = {
+  isArray: isArray,
+  isArrayBuffer: isArrayBuffer,
+  isBuffer: isBuffer,
+  isFormData: isFormData,
+  isArrayBufferView: isArrayBufferView,
+  isString: isString,
+  isNumber: isNumber,
+  isObject: isObject,
+  isUndefined: isUndefined,
+  isDate: isDate,
+  isFile: isFile,
+  isBlob: isBlob,
+  isFunction: isFunction,
+  isStream: isStream,
+  isURLSearchParams: isURLSearchParams,
+  isStandardBrowserEnv: isStandardBrowserEnv,
+  forEach: forEach,
+  merge: merge,
+  deepMerge: deepMerge,
+  extend: extend,
+  trim: trim
+};
+
+},{"./helpers/bind":"../node_modules/axios/lib/helpers/bind.js","is-buffer":"../node_modules/axios/node_modules/is-buffer/index.js"}],"../node_modules/axios/lib/helpers/buildURL.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+function encode(val) {
+  return encodeURIComponent(val).
+    replace(/%40/gi, '@').
+    replace(/%3A/gi, ':').
+    replace(/%24/g, '$').
+    replace(/%2C/gi, ',').
+    replace(/%20/g, '+').
+    replace(/%5B/gi, '[').
+    replace(/%5D/gi, ']');
+}
+
+/**
+ * Build a URL by appending params to the end
+ *
+ * @param {string} url The base of the url (e.g., http://www.google.com)
+ * @param {object} [params] The params to be appended
+ * @returns {string} The formatted url
+ */
+module.exports = function buildURL(url, params, paramsSerializer) {
+  /*eslint no-param-reassign:0*/
+  if (!params) {
+    return url;
+  }
+
+  var serializedParams;
+  if (paramsSerializer) {
+    serializedParams = paramsSerializer(params);
+  } else if (utils.isURLSearchParams(params)) {
+    serializedParams = params.toString();
+  } else {
+    var parts = [];
+
+    utils.forEach(params, function serialize(val, key) {
+      if (val === null || typeof val === 'undefined') {
+        return;
+      }
+
+      if (utils.isArray(val)) {
+        key = key + '[]';
+      } else {
+        val = [val];
+      }
+
+      utils.forEach(val, function parseValue(v) {
+        if (utils.isDate(v)) {
+          v = v.toISOString();
+        } else if (utils.isObject(v)) {
+          v = JSON.stringify(v);
+        }
+        parts.push(encode(key) + '=' + encode(v));
+      });
+    });
+
+    serializedParams = parts.join('&');
+  }
+
+  if (serializedParams) {
+    var hashmarkIndex = url.indexOf('#');
+    if (hashmarkIndex !== -1) {
+      url = url.slice(0, hashmarkIndex);
+    }
+
+    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+  }
+
+  return url;
+};
+
+},{"./../utils":"../node_modules/axios/lib/utils.js"}],"../node_modules/axios/lib/core/InterceptorManager.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+function InterceptorManager() {
+  this.handlers = [];
+}
+
+/**
+ * Add a new interceptor to the stack
+ *
+ * @param {Function} fulfilled The function to handle `then` for a `Promise`
+ * @param {Function} rejected The function to handle `reject` for a `Promise`
+ *
+ * @return {Number} An ID used to remove interceptor later
+ */
+InterceptorManager.prototype.use = function use(fulfilled, rejected) {
+  this.handlers.push({
+    fulfilled: fulfilled,
+    rejected: rejected
+  });
+  return this.handlers.length - 1;
+};
+
+/**
+ * Remove an interceptor from the stack
+ *
+ * @param {Number} id The ID that was returned by `use`
+ */
+InterceptorManager.prototype.eject = function eject(id) {
+  if (this.handlers[id]) {
+    this.handlers[id] = null;
+  }
+};
+
+/**
+ * Iterate over all the registered interceptors
+ *
+ * This method is particularly useful for skipping over any
+ * interceptors that may have become `null` calling `eject`.
+ *
+ * @param {Function} fn The function to call for each interceptor
+ */
+InterceptorManager.prototype.forEach = function forEach(fn) {
+  utils.forEach(this.handlers, function forEachHandler(h) {
+    if (h !== null) {
+      fn(h);
+    }
+  });
+};
+
+module.exports = InterceptorManager;
+
+},{"./../utils":"../node_modules/axios/lib/utils.js"}],"../node_modules/axios/lib/core/transformData.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+/**
+ * Transform the data for a request or a response
+ *
+ * @param {Object|String} data The data to be transformed
+ * @param {Array} headers The headers for the request or response
+ * @param {Array|Function} fns A single function or Array of functions
+ * @returns {*} The resulting transformed data
+ */
+module.exports = function transformData(data, headers, fns) {
+  /*eslint no-param-reassign:0*/
+  utils.forEach(fns, function transform(fn) {
+    data = fn(data, headers);
+  });
+
+  return data;
+};
+
+},{"./../utils":"../node_modules/axios/lib/utils.js"}],"../node_modules/axios/lib/cancel/isCancel.js":[function(require,module,exports) {
+'use strict';
+
+module.exports = function isCancel(value) {
+  return !!(value && value.__CANCEL__);
+};
+
+},{}],"../node_modules/axios/lib/helpers/normalizeHeaderName.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('../utils');
+
+module.exports = function normalizeHeaderName(headers, normalizedName) {
+  utils.forEach(headers, function processHeader(value, name) {
+    if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+      headers[normalizedName] = value;
+      delete headers[name];
+    }
+  });
+};
+
+},{"../utils":"../node_modules/axios/lib/utils.js"}],"../node_modules/axios/lib/core/enhanceError.js":[function(require,module,exports) {
+'use strict';
+
+/**
+ * Update an Error with the specified config, error code, and response.
+ *
+ * @param {Error} error The error to update.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The error.
+ */
+module.exports = function enhanceError(error, config, code, request, response) {
+  error.config = config;
+  if (code) {
+    error.code = code;
+  }
+
+  error.request = request;
+  error.response = response;
+  error.isAxiosError = true;
+
+  error.toJSON = function() {
+    return {
+      // Standard
+      message: this.message,
+      name: this.name,
+      // Microsoft
+      description: this.description,
+      number: this.number,
+      // Mozilla
+      fileName: this.fileName,
+      lineNumber: this.lineNumber,
+      columnNumber: this.columnNumber,
+      stack: this.stack,
+      // Axios
+      config: this.config,
+      code: this.code
+    };
+  };
+  return error;
+};
+
+},{}],"../node_modules/axios/lib/core/createError.js":[function(require,module,exports) {
+'use strict';
+
+var enhanceError = require('./enhanceError');
+
+/**
+ * Create an Error with the specified message, config, error code, request and response.
+ *
+ * @param {string} message The error message.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The created error.
+ */
+module.exports = function createError(message, config, code, request, response) {
+  var error = new Error(message);
+  return enhanceError(error, config, code, request, response);
+};
+
+},{"./enhanceError":"../node_modules/axios/lib/core/enhanceError.js"}],"../node_modules/axios/lib/core/settle.js":[function(require,module,exports) {
+'use strict';
+
+var createError = require('./createError');
+
+/**
+ * Resolve or reject a Promise based on response status.
+ *
+ * @param {Function} resolve A function that resolves the promise.
+ * @param {Function} reject A function that rejects the promise.
+ * @param {object} response The response.
+ */
+module.exports = function settle(resolve, reject, response) {
+  var validateStatus = response.config.validateStatus;
+  if (!validateStatus || validateStatus(response.status)) {
+    resolve(response);
+  } else {
+    reject(createError(
+      'Request failed with status code ' + response.status,
+      response.config,
+      null,
+      response.request,
+      response
+    ));
+  }
+};
+
+},{"./createError":"../node_modules/axios/lib/core/createError.js"}],"../node_modules/axios/lib/helpers/parseHeaders.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+// Headers whose duplicates are ignored by node
+// c.f. https://nodejs.org/api/http.html#http_message_headers
+var ignoreDuplicateOf = [
+  'age', 'authorization', 'content-length', 'content-type', 'etag',
+  'expires', 'from', 'host', 'if-modified-since', 'if-unmodified-since',
+  'last-modified', 'location', 'max-forwards', 'proxy-authorization',
+  'referer', 'retry-after', 'user-agent'
+];
+
+/**
+ * Parse headers into an object
+ *
+ * ```
+ * Date: Wed, 27 Aug 2014 08:58:49 GMT
+ * Content-Type: application/json
+ * Connection: keep-alive
+ * Transfer-Encoding: chunked
+ * ```
+ *
+ * @param {String} headers Headers needing to be parsed
+ * @returns {Object} Headers parsed into an object
+ */
+module.exports = function parseHeaders(headers) {
+  var parsed = {};
+  var key;
+  var val;
+  var i;
+
+  if (!headers) { return parsed; }
+
+  utils.forEach(headers.split('\n'), function parser(line) {
+    i = line.indexOf(':');
+    key = utils.trim(line.substr(0, i)).toLowerCase();
+    val = utils.trim(line.substr(i + 1));
+
+    if (key) {
+      if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) {
+        return;
+      }
+      if (key === 'set-cookie') {
+        parsed[key] = (parsed[key] ? parsed[key] : []).concat([val]);
+      } else {
+        parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+      }
+    }
+  });
+
+  return parsed;
+};
+
+},{"./../utils":"../node_modules/axios/lib/utils.js"}],"../node_modules/axios/lib/helpers/isURLSameOrigin.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs have full support of the APIs needed to test
+  // whether the request URL is of the same origin as current location.
+    (function standardBrowserEnv() {
+      var msie = /(msie|trident)/i.test(navigator.userAgent);
+      var urlParsingNode = document.createElement('a');
+      var originURL;
+
+      /**
+    * Parse a URL to discover it's components
+    *
+    * @param {String} url The URL to be parsed
+    * @returns {Object}
+    */
+      function resolveURL(url) {
+        var href = url;
+
+        if (msie) {
+        // IE needs attribute set twice to normalize properties
+          urlParsingNode.setAttribute('href', href);
+          href = urlParsingNode.href;
+        }
+
+        urlParsingNode.setAttribute('href', href);
+
+        // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+        return {
+          href: urlParsingNode.href,
+          protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+          host: urlParsingNode.host,
+          search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+          hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+          hostname: urlParsingNode.hostname,
+          port: urlParsingNode.port,
+          pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+            urlParsingNode.pathname :
+            '/' + urlParsingNode.pathname
+        };
+      }
+
+      originURL = resolveURL(window.location.href);
+
+      /**
+    * Determine if a URL shares the same origin as the current location
+    *
+    * @param {String} requestURL The URL to test
+    * @returns {boolean} True if URL shares the same origin, otherwise false
+    */
+      return function isURLSameOrigin(requestURL) {
+        var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+        return (parsed.protocol === originURL.protocol &&
+            parsed.host === originURL.host);
+      };
+    })() :
+
+  // Non standard browser envs (web workers, react-native) lack needed support.
+    (function nonStandardBrowserEnv() {
+      return function isURLSameOrigin() {
+        return true;
+      };
+    })()
+);
+
+},{"./../utils":"../node_modules/axios/lib/utils.js"}],"../node_modules/axios/lib/helpers/cookies.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs support document.cookie
+    (function standardBrowserEnv() {
+      return {
+        write: function write(name, value, expires, path, domain, secure) {
+          var cookie = [];
+          cookie.push(name + '=' + encodeURIComponent(value));
+
+          if (utils.isNumber(expires)) {
+            cookie.push('expires=' + new Date(expires).toGMTString());
+          }
+
+          if (utils.isString(path)) {
+            cookie.push('path=' + path);
+          }
+
+          if (utils.isString(domain)) {
+            cookie.push('domain=' + domain);
+          }
+
+          if (secure === true) {
+            cookie.push('secure');
+          }
+
+          document.cookie = cookie.join('; ');
+        },
+
+        read: function read(name) {
+          var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+          return (match ? decodeURIComponent(match[3]) : null);
+        },
+
+        remove: function remove(name) {
+          this.write(name, '', Date.now() - 86400000);
+        }
+      };
+    })() :
+
+  // Non standard browser env (web workers, react-native) lack needed support.
+    (function nonStandardBrowserEnv() {
+      return {
+        write: function write() {},
+        read: function read() { return null; },
+        remove: function remove() {}
+      };
+    })()
+);
+
+},{"./../utils":"../node_modules/axios/lib/utils.js"}],"../node_modules/axios/lib/adapters/xhr.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+var settle = require('./../core/settle');
+var buildURL = require('./../helpers/buildURL');
+var parseHeaders = require('./../helpers/parseHeaders');
+var isURLSameOrigin = require('./../helpers/isURLSameOrigin');
+var createError = require('../core/createError');
+
+module.exports = function xhrAdapter(config) {
+  return new Promise(function dispatchXhrRequest(resolve, reject) {
+    var requestData = config.data;
+    var requestHeaders = config.headers;
+
+    if (utils.isFormData(requestData)) {
+      delete requestHeaders['Content-Type']; // Let the browser set it
+    }
+
+    var request = new XMLHttpRequest();
+
+    // HTTP basic authentication
+    if (config.auth) {
+      var username = config.auth.username || '';
+      var password = config.auth.password || '';
+      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+    }
+
+    request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
+
+    // Set the request timeout in MS
+    request.timeout = config.timeout;
+
+    // Listen for ready state
+    request.onreadystatechange = function handleLoad() {
+      if (!request || request.readyState !== 4) {
+        return;
+      }
+
+      // The request errored out and we didn't get a response, this will be
+      // handled by onerror instead
+      // With one exception: request that using file: protocol, most browsers
+      // will return status as 0 even though it's a successful request
+      if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+        return;
+      }
+
+      // Prepare the response
+      var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+      var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
+      var response = {
+        data: responseData,
+        status: request.status,
+        statusText: request.statusText,
+        headers: responseHeaders,
+        config: config,
+        request: request
+      };
+
+      settle(resolve, reject, response);
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle browser request cancellation (as opposed to a manual cancellation)
+    request.onabort = function handleAbort() {
+      if (!request) {
+        return;
+      }
+
+      reject(createError('Request aborted', config, 'ECONNABORTED', request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle low level network errors
+    request.onerror = function handleError() {
+      // Real errors are hidden from us by the browser
+      // onerror should only fire if it's a network error
+      reject(createError('Network Error', config, null, request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle timeout
+    request.ontimeout = function handleTimeout() {
+      reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED',
+        request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Add xsrf header
+    // This is only done if running in a standard browser environment.
+    // Specifically not if we're in a web worker, or react-native.
+    if (utils.isStandardBrowserEnv()) {
+      var cookies = require('./../helpers/cookies');
+
+      // Add xsrf header
+      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
+        cookies.read(config.xsrfCookieName) :
+        undefined;
+
+      if (xsrfValue) {
+        requestHeaders[config.xsrfHeaderName] = xsrfValue;
+      }
+    }
+
+    // Add headers to the request
+    if ('setRequestHeader' in request) {
+      utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+        if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
+          // Remove Content-Type if data is undefined
+          delete requestHeaders[key];
+        } else {
+          // Otherwise add header to the request
+          request.setRequestHeader(key, val);
+        }
+      });
+    }
+
+    // Add withCredentials to request if needed
+    if (config.withCredentials) {
+      request.withCredentials = true;
+    }
+
+    // Add responseType to request if needed
+    if (config.responseType) {
+      try {
+        request.responseType = config.responseType;
+      } catch (e) {
+        // Expected DOMException thrown by browsers not compatible XMLHttpRequest Level 2.
+        // But, this can be suppressed for 'json' type as it can be parsed by default 'transformResponse' function.
+        if (config.responseType !== 'json') {
+          throw e;
+        }
+      }
+    }
+
+    // Handle progress if needed
+    if (typeof config.onDownloadProgress === 'function') {
+      request.addEventListener('progress', config.onDownloadProgress);
+    }
+
+    // Not all browsers support upload events
+    if (typeof config.onUploadProgress === 'function' && request.upload) {
+      request.upload.addEventListener('progress', config.onUploadProgress);
+    }
+
+    if (config.cancelToken) {
+      // Handle cancellation
+      config.cancelToken.promise.then(function onCanceled(cancel) {
+        if (!request) {
+          return;
+        }
+
+        request.abort();
+        reject(cancel);
+        // Clean up request
+        request = null;
+      });
+    }
+
+    if (requestData === undefined) {
+      requestData = null;
+    }
+
+    // Send the request
+    request.send(requestData);
+  });
+};
+
+},{"./../utils":"../node_modules/axios/lib/utils.js","./../core/settle":"../node_modules/axios/lib/core/settle.js","./../helpers/buildURL":"../node_modules/axios/lib/helpers/buildURL.js","./../helpers/parseHeaders":"../node_modules/axios/lib/helpers/parseHeaders.js","./../helpers/isURLSameOrigin":"../node_modules/axios/lib/helpers/isURLSameOrigin.js","../core/createError":"../node_modules/axios/lib/core/createError.js","./../helpers/cookies":"../node_modules/axios/lib/helpers/cookies.js"}],"../node_modules/axios/lib/defaults.js":[function(require,module,exports) {
+var process = require("process");
+'use strict';
+
+var utils = require('./utils');
+var normalizeHeaderName = require('./helpers/normalizeHeaderName');
+
+var DEFAULT_CONTENT_TYPE = {
+  'Content-Type': 'application/x-www-form-urlencoded'
+};
+
+function setContentTypeIfUnset(headers, value) {
+  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+    headers['Content-Type'] = value;
+  }
+}
+
+function getDefaultAdapter() {
+  var adapter;
+  // Only Node.JS has a process variable that is of [[Class]] process
+  if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
+    // For node use HTTP adapter
+    adapter = require('./adapters/http');
+  } else if (typeof XMLHttpRequest !== 'undefined') {
+    // For browsers use XHR adapter
+    adapter = require('./adapters/xhr');
+  }
+  return adapter;
+}
+
+var defaults = {
+  adapter: getDefaultAdapter(),
+
+  transformRequest: [function transformRequest(data, headers) {
+    normalizeHeaderName(headers, 'Accept');
+    normalizeHeaderName(headers, 'Content-Type');
+    if (utils.isFormData(data) ||
+      utils.isArrayBuffer(data) ||
+      utils.isBuffer(data) ||
+      utils.isStream(data) ||
+      utils.isFile(data) ||
+      utils.isBlob(data)
+    ) {
+      return data;
+    }
+    if (utils.isArrayBufferView(data)) {
+      return data.buffer;
+    }
+    if (utils.isURLSearchParams(data)) {
+      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+      return data.toString();
+    }
+    if (utils.isObject(data)) {
+      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+      return JSON.stringify(data);
+    }
+    return data;
+  }],
+
+  transformResponse: [function transformResponse(data) {
+    /*eslint no-param-reassign:0*/
+    if (typeof data === 'string') {
+      try {
+        data = JSON.parse(data);
+      } catch (e) { /* Ignore */ }
+    }
+    return data;
+  }],
+
+  /**
+   * A timeout in milliseconds to abort a request. If set to 0 (default) a
+   * timeout is not created.
+   */
+  timeout: 0,
+
+  xsrfCookieName: 'XSRF-TOKEN',
+  xsrfHeaderName: 'X-XSRF-TOKEN',
+
+  maxContentLength: -1,
+
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  }
+};
+
+defaults.headers = {
+  common: {
+    'Accept': 'application/json, text/plain, */*'
+  }
+};
+
+utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
+  defaults.headers[method] = {};
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+});
+
+module.exports = defaults;
+
+},{"./utils":"../node_modules/axios/lib/utils.js","./helpers/normalizeHeaderName":"../node_modules/axios/lib/helpers/normalizeHeaderName.js","./adapters/http":"../node_modules/axios/lib/adapters/xhr.js","./adapters/xhr":"../node_modules/axios/lib/adapters/xhr.js","process":"../node_modules/process/browser.js"}],"../node_modules/axios/lib/helpers/isAbsoluteURL.js":[function(require,module,exports) {
+'use strict';
+
+/**
+ * Determines whether the specified URL is absolute
+ *
+ * @param {string} url The URL to test
+ * @returns {boolean} True if the specified URL is absolute, otherwise false
+ */
+module.exports = function isAbsoluteURL(url) {
+  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+  // by any combination of letters, digits, plus, period, or hyphen.
+  return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+};
+
+},{}],"../node_modules/axios/lib/helpers/combineURLs.js":[function(require,module,exports) {
+'use strict';
+
+/**
+ * Creates a new URL by combining the specified URLs
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} relativeURL The relative URL
+ * @returns {string} The combined URL
+ */
+module.exports = function combineURLs(baseURL, relativeURL) {
+  return relativeURL
+    ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '')
+    : baseURL;
+};
+
+},{}],"../node_modules/axios/lib/core/dispatchRequest.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+var transformData = require('./transformData');
+var isCancel = require('../cancel/isCancel');
+var defaults = require('../defaults');
+var isAbsoluteURL = require('./../helpers/isAbsoluteURL');
+var combineURLs = require('./../helpers/combineURLs');
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+function throwIfCancellationRequested(config) {
+  if (config.cancelToken) {
+    config.cancelToken.throwIfRequested();
+  }
+}
+
+/**
+ * Dispatch a request to the server using the configured adapter.
+ *
+ * @param {object} config The config that is to be used for the request
+ * @returns {Promise} The Promise to be fulfilled
+ */
+module.exports = function dispatchRequest(config) {
+  throwIfCancellationRequested(config);
+
+  // Support baseURL config
+  if (config.baseURL && !isAbsoluteURL(config.url)) {
+    config.url = combineURLs(config.baseURL, config.url);
+  }
+
+  // Ensure headers exist
+  config.headers = config.headers || {};
+
+  // Transform request data
+  config.data = transformData(
+    config.data,
+    config.headers,
+    config.transformRequest
+  );
+
+  // Flatten headers
+  config.headers = utils.merge(
+    config.headers.common || {},
+    config.headers[config.method] || {},
+    config.headers || {}
+  );
+
+  utils.forEach(
+    ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
+    function cleanHeaderConfig(method) {
+      delete config.headers[method];
+    }
+  );
+
+  var adapter = config.adapter || defaults.adapter;
+
+  return adapter(config).then(function onAdapterResolution(response) {
+    throwIfCancellationRequested(config);
+
+    // Transform response data
+    response.data = transformData(
+      response.data,
+      response.headers,
+      config.transformResponse
+    );
+
+    return response;
+  }, function onAdapterRejection(reason) {
+    if (!isCancel(reason)) {
+      throwIfCancellationRequested(config);
+
+      // Transform response data
+      if (reason && reason.response) {
+        reason.response.data = transformData(
+          reason.response.data,
+          reason.response.headers,
+          config.transformResponse
+        );
+      }
+    }
+
+    return Promise.reject(reason);
+  });
+};
+
+},{"./../utils":"../node_modules/axios/lib/utils.js","./transformData":"../node_modules/axios/lib/core/transformData.js","../cancel/isCancel":"../node_modules/axios/lib/cancel/isCancel.js","../defaults":"../node_modules/axios/lib/defaults.js","./../helpers/isAbsoluteURL":"../node_modules/axios/lib/helpers/isAbsoluteURL.js","./../helpers/combineURLs":"../node_modules/axios/lib/helpers/combineURLs.js"}],"../node_modules/axios/lib/core/mergeConfig.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('../utils');
+
+/**
+ * Config-specific merge-function which creates a new config-object
+ * by merging two configuration objects together.
+ *
+ * @param {Object} config1
+ * @param {Object} config2
+ * @returns {Object} New object resulting from merging config2 to config1
+ */
+module.exports = function mergeConfig(config1, config2) {
+  // eslint-disable-next-line no-param-reassign
+  config2 = config2 || {};
+  var config = {};
+
+  utils.forEach(['url', 'method', 'params', 'data'], function valueFromConfig2(prop) {
+    if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    }
+  });
+
+  utils.forEach(['headers', 'auth', 'proxy'], function mergeDeepProperties(prop) {
+    if (utils.isObject(config2[prop])) {
+      config[prop] = utils.deepMerge(config1[prop], config2[prop]);
+    } else if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    } else if (utils.isObject(config1[prop])) {
+      config[prop] = utils.deepMerge(config1[prop]);
+    } else if (typeof config1[prop] !== 'undefined') {
+      config[prop] = config1[prop];
+    }
+  });
+
+  utils.forEach([
+    'baseURL', 'transformRequest', 'transformResponse', 'paramsSerializer',
+    'timeout', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
+    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress', 'maxContentLength',
+    'validateStatus', 'maxRedirects', 'httpAgent', 'httpsAgent', 'cancelToken',
+    'socketPath'
+  ], function defaultToConfig2(prop) {
+    if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    } else if (typeof config1[prop] !== 'undefined') {
+      config[prop] = config1[prop];
+    }
+  });
+
+  return config;
+};
+
+},{"../utils":"../node_modules/axios/lib/utils.js"}],"../node_modules/axios/lib/core/Axios.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+var buildURL = require('../helpers/buildURL');
+var InterceptorManager = require('./InterceptorManager');
+var dispatchRequest = require('./dispatchRequest');
+var mergeConfig = require('./mergeConfig');
+
+/**
+ * Create a new instance of Axios
+ *
+ * @param {Object} instanceConfig The default config for the instance
+ */
+function Axios(instanceConfig) {
+  this.defaults = instanceConfig;
+  this.interceptors = {
+    request: new InterceptorManager(),
+    response: new InterceptorManager()
+  };
+}
+
+/**
+ * Dispatch a request
+ *
+ * @param {Object} config The config specific for this request (merged with this.defaults)
+ */
+Axios.prototype.request = function request(config) {
+  /*eslint no-param-reassign:0*/
+  // Allow for axios('example/url'[, config]) a la fetch API
+  if (typeof config === 'string') {
+    config = arguments[1] || {};
+    config.url = arguments[0];
+  } else {
+    config = config || {};
+  }
+
+  config = mergeConfig(this.defaults, config);
+  config.method = config.method ? config.method.toLowerCase() : 'get';
+
+  // Hook up interceptors middleware
+  var chain = [dispatchRequest, undefined];
+  var promise = Promise.resolve(config);
+
+  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+    chain.unshift(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+    chain.push(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  while (chain.length) {
+    promise = promise.then(chain.shift(), chain.shift());
+  }
+
+  return promise;
+};
+
+Axios.prototype.getUri = function getUri(config) {
+  config = mergeConfig(this.defaults, config);
+  return buildURL(config.url, config.params, config.paramsSerializer).replace(/^\?/, '');
+};
+
+// Provide aliases for supported request methods
+utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, config) {
+    return this.request(utils.merge(config || {}, {
+      method: method,
+      url: url
+    }));
+  };
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, data, config) {
+    return this.request(utils.merge(config || {}, {
+      method: method,
+      url: url,
+      data: data
+    }));
+  };
+});
+
+module.exports = Axios;
+
+},{"./../utils":"../node_modules/axios/lib/utils.js","../helpers/buildURL":"../node_modules/axios/lib/helpers/buildURL.js","./InterceptorManager":"../node_modules/axios/lib/core/InterceptorManager.js","./dispatchRequest":"../node_modules/axios/lib/core/dispatchRequest.js","./mergeConfig":"../node_modules/axios/lib/core/mergeConfig.js"}],"../node_modules/axios/lib/cancel/Cancel.js":[function(require,module,exports) {
+'use strict';
+
+/**
+ * A `Cancel` is an object that is thrown when an operation is canceled.
+ *
+ * @class
+ * @param {string=} message The message.
+ */
+function Cancel(message) {
+  this.message = message;
+}
+
+Cancel.prototype.toString = function toString() {
+  return 'Cancel' + (this.message ? ': ' + this.message : '');
+};
+
+Cancel.prototype.__CANCEL__ = true;
+
+module.exports = Cancel;
+
+},{}],"../node_modules/axios/lib/cancel/CancelToken.js":[function(require,module,exports) {
+'use strict';
+
+var Cancel = require('./Cancel');
+
+/**
+ * A `CancelToken` is an object that can be used to request cancellation of an operation.
+ *
+ * @class
+ * @param {Function} executor The executor function.
+ */
+function CancelToken(executor) {
+  if (typeof executor !== 'function') {
+    throw new TypeError('executor must be a function.');
+  }
+
+  var resolvePromise;
+  this.promise = new Promise(function promiseExecutor(resolve) {
+    resolvePromise = resolve;
+  });
+
+  var token = this;
+  executor(function cancel(message) {
+    if (token.reason) {
+      // Cancellation has already been requested
+      return;
+    }
+
+    token.reason = new Cancel(message);
+    resolvePromise(token.reason);
+  });
+}
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+  if (this.reason) {
+    throw this.reason;
+  }
+};
+
+/**
+ * Returns an object that contains a new `CancelToken` and a function that, when called,
+ * cancels the `CancelToken`.
+ */
+CancelToken.source = function source() {
+  var cancel;
+  var token = new CancelToken(function executor(c) {
+    cancel = c;
+  });
+  return {
+    token: token,
+    cancel: cancel
+  };
+};
+
+module.exports = CancelToken;
+
+},{"./Cancel":"../node_modules/axios/lib/cancel/Cancel.js"}],"../node_modules/axios/lib/helpers/spread.js":[function(require,module,exports) {
+'use strict';
+
+/**
+ * Syntactic sugar for invoking a function and expanding an array for arguments.
+ *
+ * Common use case would be to use `Function.prototype.apply`.
+ *
+ *  ```js
+ *  function f(x, y, z) {}
+ *  var args = [1, 2, 3];
+ *  f.apply(null, args);
+ *  ```
+ *
+ * With `spread` this example can be re-written.
+ *
+ *  ```js
+ *  spread(function(x, y, z) {})([1, 2, 3]);
+ *  ```
+ *
+ * @param {Function} callback
+ * @returns {Function}
+ */
+module.exports = function spread(callback) {
+  return function wrap(arr) {
+    return callback.apply(null, arr);
+  };
+};
+
+},{}],"../node_modules/axios/lib/axios.js":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./utils');
+var bind = require('./helpers/bind');
+var Axios = require('./core/Axios');
+var mergeConfig = require('./core/mergeConfig');
+var defaults = require('./defaults');
+
+/**
+ * Create an instance of Axios
+ *
+ * @param {Object} defaultConfig The default config for the instance
+ * @return {Axios} A new instance of Axios
+ */
+function createInstance(defaultConfig) {
+  var context = new Axios(defaultConfig);
+  var instance = bind(Axios.prototype.request, context);
+
+  // Copy axios.prototype to instance
+  utils.extend(instance, Axios.prototype, context);
+
+  // Copy context to instance
+  utils.extend(instance, context);
+
+  return instance;
+}
+
+// Create the default instance to be exported
+var axios = createInstance(defaults);
+
+// Expose Axios class to allow class inheritance
+axios.Axios = Axios;
+
+// Factory for creating new instances
+axios.create = function create(instanceConfig) {
+  return createInstance(mergeConfig(axios.defaults, instanceConfig));
+};
+
+// Expose Cancel & CancelToken
+axios.Cancel = require('./cancel/Cancel');
+axios.CancelToken = require('./cancel/CancelToken');
+axios.isCancel = require('./cancel/isCancel');
+
+// Expose all/spread
+axios.all = function all(promises) {
+  return Promise.all(promises);
+};
+axios.spread = require('./helpers/spread');
+
+module.exports = axios;
+
+// Allow use of default import syntax in TypeScript
+module.exports.default = axios;
+
+},{"./utils":"../node_modules/axios/lib/utils.js","./helpers/bind":"../node_modules/axios/lib/helpers/bind.js","./core/Axios":"../node_modules/axios/lib/core/Axios.js","./core/mergeConfig":"../node_modules/axios/lib/core/mergeConfig.js","./defaults":"../node_modules/axios/lib/defaults.js","./cancel/Cancel":"../node_modules/axios/lib/cancel/Cancel.js","./cancel/CancelToken":"../node_modules/axios/lib/cancel/CancelToken.js","./cancel/isCancel":"../node_modules/axios/lib/cancel/isCancel.js","./helpers/spread":"../node_modules/axios/lib/helpers/spread.js"}],"../node_modules/axios/index.js":[function(require,module,exports) {
+module.exports = require('./lib/axios');
+},{"./lib/axios":"../node_modules/axios/lib/axios.js"}],"../Interfaces/Courses.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32235,6 +33701,8 @@ var _react = _interopRequireWildcard(require("react"));
 var _reactRouterDom = require("react-router-dom");
 
 var _NavBar = _interopRequireDefault(require("./NavBar"));
+
+var _axios = require("axios");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32270,21 +33738,29 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Courses).call(this, props));
     _this.state = {
-      courses: [{
-        id: "SE3010",
-        name: "Application Frameworks"
-      }, {
-        id: "SE3020",
-        name: "Distributed Systems"
-      }, {
-        id: "SE3030",
-        name: "Software Architecture"
-      }]
+      courses: []
     };
     return _this;
   }
 
   _createClass(Courses, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('http://localhost:3000/api/instructor/courses/get-courses/').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        _this2.setState({
+          courses: json
+        }, function () {
+          console.log('courses: ' + _this2.state.courses);
+        });
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null), _react.default.createElement("div", {
@@ -32303,23 +33779,19 @@ function (_Component) {
         }
       }, _react.default.createElement("div", {
         className: "card-header"
-      }, _react.default.createElement("ul", {
-        className: "list-group"
-      }, _react.default.createElement("li", {
-        className: "list-group-item list-group-item-dark text-black-50"
-      }, this.state.courses.map(function (item, i) {
-        return _react.default.createElement(_reactRouterDom.Link, {
+      }, _react.default.createElement("table", {
+        className: "table table-hover table-dark"
+      }, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Course Name"), _react.default.createElement("th", null, "Course Head"), _react.default.createElement("th", null, "Credit points"), _react.default.createElement("th", null, "Enrolment Key"), _react.default.createElement("th", null, "Year"), _react.default.createElement("th", null, "Semester"), _react.default.createElement("th", null, "View Content"))), _react.default.createElement("tbody", null, this.state.courses.map(function (course) {
+        return _react.default.createElement("tr", null, _react.default.createElement("td", null, course.courseName), _react.default.createElement("td", null, course.courseHead), _react.default.createElement("td", null, course.credits), _react.default.createElement("td", null, course.enrollmentKey), _react.default.createElement("td", null, course.year), _react.default.createElement("td", null, course.semester), _react.default.createElement("th", null, _react.default.createElement(_reactRouterDom.Link, {
           to: {
-            pathname: "/modules",
-            propName: item.name
+            pathname: "/allDetails/" + course._id,
+            courseName: course.courseName
           },
           className: "nav-link text-white ml-4"
-        }, _react.default.createElement("h1", {
-          key: i,
-          className: "card-header"
-        }, _react.default.createElement("i", {
-          className: "fas fa-book"
-        }, "\xA0\xA0"), item.name));
+        }, _react.default.createElement("button", {
+          type: "button",
+          className: "btn btn-light"
+        }, "view"))));
       })))))))));
     }
   }]);
@@ -32329,7 +33801,7 @@ function (_Component) {
 
 var _default = Courses;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./NavBar":"../Interfaces/NavBar.js"}],"../Interfaces/Notifications.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./NavBar":"../Interfaces/NavBar.js","axios":"../node_modules/axios/index.js"}],"../Interfaces/Notifications.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32400,6 +33872,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _NavBar = _interopRequireDefault(require("./NavBar"));
 
+var _reactRouterDom = require("react-router-dom");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -32427,18 +33901,161 @@ var InstructorCorner =
 function (_Component) {
   _inherits(InstructorCorner, _Component);
 
-  function InstructorCorner() {
+  function InstructorCorner(props) {
+    var _this;
+
     _classCallCheck(this, InstructorCorner);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(InstructorCorner).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(InstructorCorner).call(this, props));
+    _this.state = {
+      courses: []
+    };
+    return _this;
   }
 
   _createClass(InstructorCorner, [{
     key: "render",
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null), _react.default.createElement("div", {
-        className: "container"
-      }, _react.default.createElement("h1", null, "Instructor Corner"), _react.default.createElement("hr", null)));
+        className: "container",
+        style: {
+          align: "center"
+        }
+      }, _react.default.createElement("h1", null, "Instructor Corner"), _react.default.createElement("hr", null), _react.default.createElement("div", {
+        className: "row"
+      }, _react.default.createElement("div", {
+        className: "col-sm",
+        style: {
+          padding: "10px"
+        }
+      }, _react.default.createElement("div", {
+        className: "card border-dark mb-3",
+        style: {
+          maxWidth: "18rem"
+        }
+      }, _react.default.createElement("div", {
+        className: "card-header"
+      }, "Notices"), _react.default.createElement("div", {
+        className: "card-body"
+      }, _react.default.createElement("h5", {
+        className: "card-title"
+      }, "Add notices"), _react.default.createElement(_reactRouterDom.Link, {
+        to: "/notices",
+        className: "nav-link text-white ml-4"
+      }, _react.default.createElement("button", {
+        type: "button",
+        className: "btn btn-outline-dark"
+      }, "ADD")))), _react.default.createElement("div", {
+        className: "col-sm",
+        style: {
+          padding: "10px"
+        }
+      }, _react.default.createElement("div", {
+        className: "card border-dark mb-3",
+        style: {
+          maxWidth: "18rem"
+        }
+      }, _react.default.createElement("div", {
+        className: "card-header"
+      }, "Materials"), _react.default.createElement("div", {
+        className: "card-body"
+      }, _react.default.createElement("h5", {
+        className: "card-title"
+      }, "Add Materials"), _react.default.createElement(_reactRouterDom.Link, {
+        to: "/materials",
+        className: "nav-link text-white ml-4"
+      }, _react.default.createElement("button", {
+        type: "button",
+        className: "btn btn-outline-dark"
+      }, "ADD")))))), _react.default.createElement("div", {
+        className: "col-sm",
+        style: {
+          padding: "10px"
+        }
+      }, _react.default.createElement("div", {
+        className: "card border-dark mb-3",
+        style: {
+          maxWidth: "18rem"
+        }
+      }, _react.default.createElement("div", {
+        className: "card-header"
+      }, "Assignments"), _react.default.createElement("div", {
+        className: "card-body"
+      }, _react.default.createElement("h5", {
+        className: "card-title"
+      }, "Add Assignments"), _react.default.createElement(_reactRouterDom.Link, {
+        to: "/assignments",
+        className: "nav-link text-white ml-4"
+      }, _react.default.createElement("button", {
+        type: "button",
+        className: "btn btn-outline-dark"
+      }, "ADD")))), _react.default.createElement("div", {
+        className: "col-sm",
+        style: {
+          padding: "10px"
+        }
+      }, _react.default.createElement("div", {
+        className: "card border-dark mb-3",
+        style: {
+          maxWidth: "18rem"
+        }
+      }, _react.default.createElement("div", {
+        className: "card-header"
+      }, "Exams"), _react.default.createElement("div", {
+        className: "card-body"
+      }, _react.default.createElement("h5", {
+        className: "card-title"
+      }, "Add Exams"), _react.default.createElement(_reactRouterDom.Link, {
+        to: "/exams",
+        className: "nav-link text-white ml-4"
+      }, _react.default.createElement("button", {
+        type: "button",
+        className: "btn btn-outline-dark"
+      }, "ADD")))))), _react.default.createElement("div", {
+        className: "col-sm",
+        style: {
+          padding: "10px"
+        }
+      }, _react.default.createElement("div", {
+        className: "card border-dark mb-3",
+        style: {
+          maxWidth: "18rem"
+        }
+      }, _react.default.createElement("div", {
+        className: "card-header"
+      }, "Results"), _react.default.createElement("div", {
+        className: "card-body"
+      }, _react.default.createElement("h5", {
+        className: "card-title"
+      }, "Add Results"), _react.default.createElement(_reactRouterDom.Link, {
+        to: "/results",
+        className: "nav-link text-white ml-4"
+      }, _react.default.createElement("button", {
+        type: "button",
+        className: "btn btn-outline-dark"
+      }, "ADD")))), _react.default.createElement("div", {
+        className: "col-sm",
+        style: {
+          padding: "10px"
+        }
+      }, _react.default.createElement("div", {
+        className: "card border-dark mb-3",
+        style: {
+          maxWidth: "18rem"
+        }
+      }, _react.default.createElement("div", {
+        className: "card-header"
+      }, "View Answers"), _react.default.createElement("div", {
+        className: "card-body"
+      }, _react.default.createElement("h5", {
+        className: "card-title"
+      }, "View Uploaded Answers"), _react.default.createElement(_reactRouterDom.Link, {
+        to: "/viewAnswers",
+        className: "nav-link text-white ml-4"
+      }, _react.default.createElement("button", {
+        type: "button",
+        className: "btn btn-outline-dark"
+      }, "View")))))))));
     }
   }]);
 
@@ -32447,72 +34064,7 @@ function (_Component) {
 
 var _default = InstructorCorner;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./NavBar":"../Interfaces/NavBar.js"}],"../Interfaces/Modules.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _NavBar = _interopRequireDefault(require("./NavBar"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-var Modules =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Modules, _Component);
-
-  function Modules(props) {
-    var _this;
-
-    _classCallCheck(this, Modules);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Modules).call(this, props));
-    _this.state = {
-      props: props
-    };
-    return _this;
-  }
-
-  _createClass(Modules, [{
-    key: "render",
-    value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null), _react.default.createElement("div", {
-        className: "container"
-      }, _react.default.createElement("h1", null, this.props.location.propName), _react.default.createElement("hr", null)));
-    }
-  }]);
-
-  return Modules;
-}(_react.Component);
-
-var _default = Modules;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","./NavBar":"../Interfaces/NavBar.js"}],"App.css":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./NavBar":"../Interfaces/NavBar.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"App.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -42685,6 +44237,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -42708,52 +44262,183 @@ var Assignments =
 function (_Component) {
   _inherits(Assignments, _Component);
 
-  function Assignments() {
+  function Assignments(props) {
+    var _this;
+
     _classCallCheck(this, Assignments);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Assignments).apply(this, arguments));
-  }
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Assignments).call(this, props));
+    _this.state = {
+      courses: [],
+      courseName: "",
+      name: " ",
+      dueDate: "",
+      file: "",
+      fileToSubmit: ""
+    };
+    return _this;
+  } //handle On Submit
+
 
   _createClass(Assignments, [{
+    key: "handleOnSubmit",
+    value: function handleOnSubmit(e) {
+      e.preventDefault();
+      console.log(document.getElementById('courseName'));
+      var formData = new FormData();
+      var fileField = document.querySelector('input[type="file"]');
+      formData.append('courses', this.state.courseName);
+      formData.append('name', this.state.name);
+      formData.append('file', fileField.files[0]);
+      formData.append('dueDate', this.state.dueDate);
+      formData.append('fileToSubmit', this.state.fileToSubmit);
+      fetch('http://localhost:3000/api/instructor/assignments/add-assignments', {
+        method: 'POST',
+        body: formData
+      }).then(function (response) {
+        return response.json();
+      }).catch(function (error) {
+        return console.error('Error:', error);
+      }).then(function (response) {
+        return console.log('Success:', JSON.stringify(response));
+      });
+      alert("New Record Added");
+      this.props.history.push("/instructorCorner");
+    }
+  }, {
+    key: "onChange",
+    value: function onChange(event) {
+      this.setState(_defineProperty({}, event.target.name, event.target.value));
+    }
+  }, {
+    key: "onSubmit",
+    value: function onSubmit(event) {
+      event.preventDefault();
+      fetch('http://localhost:3000/api/instructor/assignments/add-assignments', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          "courses": this.state.course,
+          "name": this.state.name,
+          "dueDate": this.state.dueDate,
+          "fileToSubmit": this.state.fileToSubmit
+        })
+      }).then(function (ress) {
+        return ress.json();
+      }).then(function (json) {
+        console.log('good' + json);
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      }); // console.log(notice);
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('http://localhost:3000/api/instructor/courses/get-courses/').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        _this2.setState({
+          courses: json
+        }, function () {
+          console.log('courses: ' + _this2.state.courses);
+        });
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      });
+    }
+  }, {
+    key: "setCourse",
+    value: function setCourse(e) {
+      console.log(e.target.value);
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null), _react.default.createElement("div", {
         className: "container"
-      }, _react.default.createElement("h1", null, "Assignments Upload"), _react.default.createElement("hr", null), _react.default.createElement("div", {
-        className: "custom-file mb-3"
-      }, _react.default.createElement(_reactFilepond.FilePond, null)), _react.default.createElement("hr", null), _react.default.createElement("table", {
-        class: "table table-sm table-dark"
+      }, _react.default.createElement("h1", null, "Assignments Upload"), _react.default.createElement("hr", null), _react.default.createElement("hr", null), _react.default.createElement("form", {
+        onSubmit: function onSubmit(value) {
+          return _this3.handleOnSubmit(value);
+        }
+      }, _react.default.createElement("table", {
+        className: "table table-sm table-dark"
       }, _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "Assignment Name "), _react.default.createElement("th", {
+      }, "Course"), _react.default.createElement("th", null, _react.default.createElement("select", {
+        className: "form-control form-control-lg",
+        id: "courseName",
+        name: "courseName",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        }
+      }, this.state.courses.map(function (course) {
+        return _react.default.createElement("option", {
+          key: course.id,
+          value: course._id
+        }, course.courseName);
+      })))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "Assignment Name"), _react.default.createElement("th", {
         scope: "col"
       }, _react.default.createElement("input", {
-        type: "aName",
+        type: "text",
         className: "form-control",
-        id: "aName",
+        name: "name",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        },
         placeholder: "Enter Assignment Name"
       }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "Due Date "), _react.default.createElement("th", {
+      }, "File"), _react.default.createElement("th", null, _react.default.createElement("input", {
+        type: "file",
+        className: "form-control",
+        name: "file",
+        id: "file",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        }
+      }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "Due Date"), _react.default.createElement("th", {
         scope: "col"
       }, _react.default.createElement("input", {
-        type: "dDate",
+        type: "date",
         className: "form-control",
-        id: "dDate",
+        name: "dueDate",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        },
         placeholder: "Enter Due Date"
       }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "Time Remaining "), _react.default.createElement("th", {
+      }, "File To Submit"), _react.default.createElement("th", {
         scope: "col"
-      })), _react.default.createElement("tr", null, _react.default.createElement("th", {
+      }, _react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        name: "fileToSubmit",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        },
+        placeholder: "File Type"
+      }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "Uploaded date "), _react.default.createElement("th", {
+      }), _react.default.createElement("th", {
         scope: "col"
-      }, "--------------")), _react.default.createElement("tr", null, _react.default.createElement("th", {
-        scope: "col"
-      }, "File Submission  "), _react.default.createElement("th", {
-        scope: "col"
-      }, " ", _react.default.createElement(_reactFilepond.FilePond, null), " ")))));
+      }, _react.default.createElement("button", {
+        style: {
+          align: "right"
+        },
+        type: "submit",
+        className: "btn btn-light"
+      }, "Submit")))))));
     }
   }]);
 
@@ -42788,6 +44473,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -42811,52 +44498,182 @@ var Exams =
 function (_Component) {
   _inherits(Exams, _Component);
 
-  function Exams() {
+  function Exams(props) {
+    var _this;
+
     _classCallCheck(this, Exams);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Exams).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Exams).call(this, props));
+    _this.state = {
+      courses: [],
+      course: "",
+      name: " ",
+      dueDate: "",
+      file: ""
+    };
+    return _this;
   }
 
   _createClass(Exams, [{
+    key: "onChange",
+    value: function onChange(event) {
+      this.setState(_defineProperty({}, event.target.name, event.target.value));
+    } //handle On Submit
+
+  }, {
+    key: "handleOnSubmit",
+    value: function handleOnSubmit(e) {
+      e.preventDefault();
+      console.log(document.getElementById('courseName'));
+      var formData = new FormData();
+      var fileField = document.querySelector('input[type="file"]');
+      formData.append('courses', this.state.courseName);
+      formData.append('name', this.state.name);
+      formData.append('file', fileField.files[0]);
+      formData.append('dueDate', this.state.dueDate);
+      formData.append('fileToSubmit', this.state.fileToSubmit);
+      fetch('http://localhost:3000/api/instructor/exams/add-exams', {
+        method: 'POST',
+        body: formData
+      }).then(function (response) {
+        return response.json();
+      }).catch(function (error) {
+        return console.error('Error:', error);
+      }).then(function (response) {
+        return console.log('Success:', JSON.stringify(response));
+      });
+      alert("New Record Added");
+      this.props.history.push("/instructorCorner");
+    }
+  }, {
+    key: "onChange",
+    value: function onChange(event) {
+      this.setState(_defineProperty({}, event.target.name, event.target.value));
+    }
+  }, {
+    key: "onSubmit",
+    value: function onSubmit(event) {
+      event.preventDefault();
+      fetch('http://localhost:3000/api/instructor/exams/add-exams', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          "courses": this.state.course,
+          "name": this.state.name,
+          "dueDate": this.state.dueDate,
+          "fileToSubmit": this.state.fileToSubmit
+        })
+      }).then(function (ress) {
+        return ress.json();
+      }).then(function (json) {
+        console.log('good' + json);
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      }); // console.log(notice);
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('http://localhost:3000/api/instructor/courses/get-courses/').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        _this2.setState({
+          courses: json
+        }, function () {
+          console.log('courses: ' + _this2.state.courses);
+        });
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null), _react.default.createElement("div", {
         className: "container"
-      }, _react.default.createElement("h1", null, "Exams upload"), _react.default.createElement("hr", null), _react.default.createElement("div", {
-        className: "custom-file mb-3"
-      }, _react.default.createElement(_reactFilepond.FilePond, null)), _react.default.createElement("hr", null), _react.default.createElement("table", {
-        class: "table table-sm table-dark"
+      }, _react.default.createElement("h1", null, "Exams upload"), _react.default.createElement("hr", null), _react.default.createElement("form", {
+        onSubmit: function onSubmit(value) {
+          return _this3.handleOnSubmit(value);
+        }
+      }, _react.default.createElement("table", {
+        className: "table table-sm table-dark"
       }, _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "Assignment Name "), _react.default.createElement("th", {
+      }, "Course"), _react.default.createElement("th", null, _react.default.createElement("select", {
+        className: "form-control form-control-lg",
+        id: "courseName",
+        name: "courseName",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        }
+      }, this.state.courses.map(function (course) {
+        return _react.default.createElement("option", {
+          key: course.id,
+          value: course._id
+        }, course.courseName);
+      })))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "Exam Name"), _react.default.createElement("th", {
         scope: "col"
       }, _react.default.createElement("input", {
-        type: "aName",
+        type: "text",
         className: "form-control",
-        id: "aName",
+        name: "name",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        },
         placeholder: "Enter Assignment Name"
       }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "Due Date "), _react.default.createElement("th", {
+      }, "File"), _react.default.createElement("th", null, _react.default.createElement("input", {
+        type: "file",
+        className: "form-control",
+        name: "file",
+        id: "file",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        }
+      }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "Due Date"), _react.default.createElement("th", {
         scope: "col"
       }, _react.default.createElement("input", {
-        type: "dDate",
+        type: "date",
         className: "form-control",
-        id: "dDate",
+        name: "dueDate",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        },
         placeholder: "Enter Due Date"
       }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "Time Remaining "), _react.default.createElement("th", {
+      }, "File To Submit"), _react.default.createElement("th", {
         scope: "col"
-      })), _react.default.createElement("tr", null, _react.default.createElement("th", {
+      }, _react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        name: "fileToSumbit",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        },
+        placeholder: "File Type"
+      }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "Uploaded date "), _react.default.createElement("th", {
+      }), _react.default.createElement("th", {
         scope: "col"
-      }, "--------------")), _react.default.createElement("tr", null, _react.default.createElement("th", {
-        scope: "col"
-      }, "File Submission  "), _react.default.createElement("th", {
-        scope: "col"
-      }, " ", _react.default.createElement(_reactFilepond.FilePond, null), " ")))));
+      }, _react.default.createElement("button", {
+        style: {
+          align: "right"
+        },
+        type: "submit",
+        className: "btn btn-light"
+      }, "Submit")))))));
     }
   }]);
 
@@ -42866,6 +44683,192 @@ function (_Component) {
 var _default = Exams;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","../NavBar":"../Interfaces/NavBar.js","react-filepond":"../node_modules/react-filepond/dist/react-filepond.js","filepond/dist/filepond.min.css":"../node_modules/filepond/dist/filepond.min.css","filepond-plugin-image-preview":"../node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js","filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css":"../node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css"}],"../Interfaces/Views/Notices.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _NavBar = _interopRequireDefault(require("../NavBar"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var Notices =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Notices, _Component);
+
+  function Notices(props) {
+    var _this;
+
+    _classCallCheck(this, Notices);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Notices).call(this, props));
+    _this.state = {
+      courses: [],
+      course: "",
+      topic: " ",
+      description: "",
+      date: ""
+    };
+    _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
+    _this.onSubmit = _this.onSubmit.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Notices, [{
+    key: "onChange",
+    value: function onChange(event) {
+      this.setState(_defineProperty({}, event.target.name, event.target.value));
+    }
+  }, {
+    key: "onSubmit",
+    value: function onSubmit(event) {
+      event.preventDefault();
+      fetch('/api/instructor/notices/add-notice', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          "courses": this.state.course,
+          "topic": this.state.topic,
+          "description": this.state.description,
+          "date": this.state.date
+        })
+      }).then(function (ress) {
+        return ress.json();
+      }).then(function (json) {
+        console.log('good' + json);
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      }); // console.log(notice);
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('http://localhost:3000/api/instructor/courses/get-courses/').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        _this2.setState({
+          courses: json
+        }, function () {
+          console.log('courses: ' + _this2.state.courses);
+        });
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null), _react.default.createElement("div", {
+        className: "container"
+      }, _react.default.createElement("h1", null, "Notice upload"), _react.default.createElement("hr", null), _react.default.createElement("hr", null), _react.default.createElement("form", {
+        onSubmit: function onSubmit(e) {
+          return _this3.onSubmit(e);
+        }
+      }, _react.default.createElement("table", {
+        className: "table table-sm table-dark"
+      }, _react.default.createElement("tbody", null, _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "Course"), _react.default.createElement("th", null, _react.default.createElement("select", {
+        className: "form-control form-control-lg",
+        name: "course"
+      }, this.state.courses.map(function (course) {
+        return _react.default.createElement("option", {
+          key: course.id,
+          onChange: function onChange(e) {
+            return _this3.onChange(e);
+          }
+        }, course.courseName);
+      })))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "Topic"), _react.default.createElement("th", {
+        scope: "col"
+      }, _react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        id: "topic",
+        name: "topic",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        },
+        placeholder: "Enter Topic"
+      }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "Description"), _react.default.createElement("th", {
+        scope: "col"
+      }, _react.default.createElement("textarea", {
+        className: "form-control",
+        id: "description",
+        name: "description",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        },
+        placeholder: "Enter description"
+      }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "Date"), _react.default.createElement("th", {
+        scope: "col"
+      }, _react.default.createElement("input", {
+        type: "date",
+        className: "form-control",
+        id: "date",
+        name: "date",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        },
+        placeholder: "Enter date"
+      }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }), _react.default.createElement("th", {
+        scope: "col"
+      }, _react.default.createElement("button", {
+        style: {
+          align: "right"
+        },
+        type: "submit",
+        className: "btn btn-light"
+      }, "Submit"))))))));
+    }
+  }]);
+
+  return Notices;
+}(_react.Component);
+
+var _default = Notices;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","../NavBar":"../Interfaces/NavBar.js"}],"../Interfaces/Views/Results.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42891,6 +44894,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -42909,75 +44914,689 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 (0, _reactFilepond.registerPlugin)(_filepondPluginImagePreview.default);
 
-var Notices =
+var Results =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(Notices, _Component);
+  _inherits(Results, _Component);
 
-  function Notices() {
-    _classCallCheck(this, Notices);
+  function Results(props) {
+    var _this;
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Notices).apply(this, arguments));
-  }
+    _classCallCheck(this, Results);
 
-  _createClass(Notices, [{
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Results).call(this, props));
+    _this.state = {
+      courses: [],
+      courseName: "",
+      description: "",
+      file: ""
+    };
+    ;
+    return _this;
+  } //handle On Submit
+
+
+  _createClass(Results, [{
+    key: "handleOnSubmit",
+    value: function handleOnSubmit(e) {
+      e.preventDefault();
+      console.log(document.getElementById('courseName'));
+      var formData = new FormData();
+      var fileField = document.querySelector('input[type="file"]');
+      formData.append('courses', this.state.courseName);
+      formData.append('description', this.state.description);
+      formData.append('file', fileField.files[0]);
+      fetch('http://localhost:3000/api/instructor/results/add-results', {
+        method: 'POST',
+        body: formData
+      }).then(function (response) {
+        return response.json();
+      }).catch(function (error) {
+        return console.error('Error:', error);
+      }).then(function (response) {
+        return console.log('Success:', JSON.stringify(response));
+      });
+      alert("New Record Added");
+      this.props.history.push("/instructorCorner");
+    }
+  }, {
+    key: "onChange",
+    value: function onChange(event) {
+      this.setState(_defineProperty({}, event.target.name, event.target.value));
+    }
+  }, {
+    key: "onSubmit",
+    value: function onSubmit(event) {
+      event.preventDefault();
+      fetch('http://localhost:3000/api/instructor/results/add-results', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          "courses": this.state.course,
+          "description": this.state.description
+        })
+      }).then(function (ress) {
+        return ress.json();
+      }).then(function (json) {
+        console.log('good' + json);
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      }); // console.log(notice);
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('http://localhost:3000/api/instructor/courses/get-courses/').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        _this2.setState({
+          courses: json
+        }, function () {
+          console.log('courses: ' + _this2.state.courses);
+        });
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null), _react.default.createElement("div", {
         className: "container"
-      }, _react.default.createElement("h1", null, "Notice upload"), _react.default.createElement("hr", null), _react.default.createElement("hr", null), _react.default.createElement("table", {
+      }, _react.default.createElement("h1", null, "Results Upload"), _react.default.createElement("hr", null), _react.default.createElement("hr", null), _react.default.createElement("form", {
+        onSubmit: function onSubmit(value) {
+          return _this3.handleOnSubmit(value);
+        }
+      }, _react.default.createElement("table", {
         class: "table table-sm table-dark"
       }, _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "Course"), _react.default.createElement("th", null, " ", _react.default.createElement("select", {
-        className: "form-control form-control-lg"
-      }, _react.default.createElement("option", null, "Select course")))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+      }, "Course"), _react.default.createElement("th", null, _react.default.createElement("select", {
+        className: "form-control form-control-lg",
+        id: "courseName",
+        name: "courseName",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        }
+      }, this.state.courses.map(function (course) {
+        return _react.default.createElement("option", {
+          key: course.id,
+          value: course._id
+        }, course.courseName);
+      })))), _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "Topic"), _react.default.createElement("th", {
-        scope: "col"
-      }, _react.default.createElement("input", {
-        type: "topic",
-        className: "form-control",
-        id: "topic",
-        placeholder: "Enter Topic"
-      }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
-        scope: "col"
-      }, "Description "), _react.default.createElement("th", {
+      }, "Details"), _react.default.createElement("th", {
         scope: "col"
       }, _react.default.createElement("textarea", {
-        type: "description",
         className: "form-control",
-        id: "description",
-        placeholder: "Enter description"
+        name: "description",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        },
+        placeholder: "Enter details"
       }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "Date "), _react.default.createElement("th", {
-        scope: "col"
-      }, _react.default.createElement("input", {
-        type: "date",
+      }, "File"), _react.default.createElement("th", null, _react.default.createElement("input", {
+        type: "file",
         className: "form-control",
-        id: "date",
-        placeholder: "Enter date"
+        name: "file",
+        id: "file",
+        required: true
       }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
         scope: "col"
-      }, "  "), _react.default.createElement("th", {
+      }), _react.default.createElement("th", {
         scope: "col"
       }, _react.default.createElement("button", {
         style: {
           align: "right"
         },
-        type: "button",
+        type: "submit",
         className: "btn btn-light"
-      }, "Submit"), " ")))));
+      }, "Submit")))))));
     }
   }]);
 
-  return Notices;
+  return Results;
 }(_react.Component);
 
-var _default = Notices;
+var _default = Results;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../NavBar":"../Interfaces/NavBar.js","react-filepond":"../node_modules/react-filepond/dist/react-filepond.js","filepond/dist/filepond.min.css":"../node_modules/filepond/dist/filepond.min.css","filepond-plugin-image-preview":"../node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js","filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css":"../node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css"}],"App.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../NavBar":"../Interfaces/NavBar.js","react-filepond":"../node_modules/react-filepond/dist/react-filepond.js","filepond/dist/filepond.min.css":"../node_modules/filepond/dist/filepond.min.css","filepond-plugin-image-preview":"../node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js","filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css":"../node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css"}],"../Interfaces/Views/Materials.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _NavBar = _interopRequireDefault(require("../NavBar"));
+
+var _reactFilepond = require("react-filepond");
+
+require("filepond/dist/filepond.min.css");
+
+var _filepondPluginImagePreview = _interopRequireDefault(require("filepond-plugin-image-preview"));
+
+require("filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+(0, _reactFilepond.registerPlugin)(_filepondPluginImagePreview.default);
+
+var Materials =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Materials, _Component);
+
+  function Materials(props) {
+    var _this;
+
+    _classCallCheck(this, Materials);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Materials).call(this, props));
+    _this.state = {
+      courses: [],
+      courseName: "",
+      lectureName: "",
+      week: "",
+      file: ""
+    };
+    return _this;
+  } //handle On Submit
+
+
+  _createClass(Materials, [{
+    key: "handleOnSubmit",
+    value: function handleOnSubmit(e) {
+      e.preventDefault();
+      console.log(document.getElementById('courseName'));
+      var formData = new FormData();
+      var fileField = document.querySelector('input[type="file"]');
+      formData.append('courses', this.state.courseName);
+      formData.append('lectureName', this.state.lectureName);
+      formData.append('week', this.state.week);
+      formData.append('file', fileField.files[0]);
+      fetch('http://localhost:3000/api/instructor/materials/add-material', {
+        method: 'POST',
+        body: formData
+      }).then(function (response) {
+        return response.json();
+      }).catch(function (error) {
+        return console.error('Error:', error);
+      }).then(function (response) {
+        return console.log('Success:', JSON.stringify(response));
+      });
+      alert("New Record Added");
+      this.props.history.push("/instructorCorner");
+    }
+  }, {
+    key: "onChange",
+    value: function onChange(event) {
+      this.setState(_defineProperty({}, event.target.name, event.target.value));
+    }
+  }, {
+    key: "onSubmit",
+    value: function onSubmit(event) {
+      event.preventDefault();
+      fetch('http://localhost:3000/api/instructor/materials/add-material', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          "courses": this.state.course,
+          "lectureName": this.state.lectureName,
+          "week": this.state.week,
+          "date": this.state.date
+        })
+      }).then(function (ress) {
+        return ress.json();
+      }).then(function (json) {
+        console.log('good' + json);
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      }); // console.log(notice);
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('http://localhost:3000/api/instructor/courses/get-courses/').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        _this2.setState({
+          courses: json
+        }, function () {
+          console.log('courses: ' + _this2.state.courses);
+        });
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      });
+    }
+  }, {
+    key: "setCourse",
+    value: function setCourse(e) {
+      console.log(e.target.value);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null), _react.default.createElement("div", {
+        className: "container"
+      }, _react.default.createElement("h1", null, "Materials Upload"), _react.default.createElement("hr", null), _react.default.createElement("hr", null), _react.default.createElement("form", {
+        onSubmit: function onSubmit(value) {
+          return _this3.handleOnSubmit(value);
+        }
+      }, _react.default.createElement("table", {
+        className: "table table-sm table-dark"
+      }, _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "Course"), _react.default.createElement("th", null, _react.default.createElement("select", {
+        className: "form-control form-control-lg",
+        id: "courseName",
+        name: "courseName",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        }
+      }, this.state.courses.map(function (course) {
+        return _react.default.createElement("option", {
+          key: course.id,
+          value: course._id
+        }, course.courseName);
+      })))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "Lecture Name"), _react.default.createElement("th", {
+        scope: "col"
+      }, _react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        name: "lectureName",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        },
+        placeholder: "Enter Lecture Name"
+      }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "Week"), _react.default.createElement("th", {
+        scope: "col"
+      }, _react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        name: "week",
+        onChange: function onChange(e) {
+          return _this3.onChange(e);
+        }
+      }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }, "File"), _react.default.createElement("th", null, _react.default.createElement("input", {
+        type: "file",
+        className: "form-control",
+        name: "file",
+        id: "file",
+        required: true
+      }))), _react.default.createElement("tr", null, _react.default.createElement("th", {
+        scope: "col"
+      }), _react.default.createElement("th", {
+        scope: "col"
+      }, _react.default.createElement("button", {
+        style: {
+          align: "right"
+        },
+        type: "submit",
+        className: "btn btn-light"
+      }, "Submit")))))));
+    }
+  }]);
+
+  return Materials;
+}(_react.Component);
+
+var _default = Materials;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","../NavBar":"../Interfaces/NavBar.js","react-filepond":"../node_modules/react-filepond/dist/react-filepond.js","filepond/dist/filepond.min.css":"../node_modules/filepond/dist/filepond.min.css","filepond-plugin-image-preview":"../node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js","filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css":"../node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css"}],"../Interfaces/Views/AllDetails.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _NavBar = _interopRequireDefault(require("../NavBar"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var AllDetails =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(AllDetails, _Component);
+
+  function AllDetails(props) {
+    var _this;
+
+    _classCallCheck(this, AllDetails);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(AllDetails).call(this, props));
+    _this.state = {
+      props: props,
+      courses: [],
+      notices: [],
+      materials: [],
+      assignments: [],
+      exams: [],
+      results: []
+    };
+    return _this;
+  }
+
+  _createClass(AllDetails, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('http://localhost:3000/api/instructor/notices/get-notices/' + this.props.match.params.course).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        console.log('notices: ' + json);
+
+        _this2.setState({
+          notices: json
+        }, function () {
+          console.log('state: ' + _this2.state.notices);
+        });
+      }).catch(function (err) {
+        console.log('error: ' + err + _this2.props.match.params.course);
+      });
+      fetch('http://localhost:3000/api/instructor/materials/get-material/' + this.props.match.params.course).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        console.log('materials: ' + json);
+
+        _this2.setState({
+          materials: json
+        }, function () {
+          console.log('materials: ' + _this2.state.materials);
+        });
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      });
+      fetch('http://localhost:3000/api/instructor/assignments/get-assignments/' + this.props.match.params.course).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        _this2.setState({
+          assignments: json
+        }, function () {
+          console.log('assignments: ' + _this2.state.assignments);
+        });
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      });
+      fetch('http://localhost:3000/api/instructor/exams/get-exams/' + this.props.match.params.course).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        _this2.setState({
+          exams: json
+        }, function () {
+          console.log('exams: ' + _this2.state.exams);
+        });
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      });
+      fetch('http://localhost:3000/api/instructor/results/get-results/' + this.props.match.params.course).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        _this2.setState({
+          results: json
+        }, function () {
+          console.log('results: ' + _this2.state.results);
+        });
+      }).catch(function (err) {
+        console.log('error: ' + err);
+      });
+    }
+  }, {
+    key: "onSubmitAssignmentSubmit",
+    value: function onSubmitAssignmentSubmit(e) {
+      e.preventDefault();
+      console.log(e.target.value);
+      fetch('http://localhost:3000/api/instructor/assignments/update-assignment/' + e.target.value, {
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          "dueDate": document.getElementById('courseName').value
+        })
+      }).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        alert('update success  ' + json);
+      }).catch(function (err) {
+        alert('update success  ' + json);
+      });
+    }
+  }, {
+    key: "onSubmitExamSubmit",
+    value: function onSubmitExamSubmit(e) {
+      e.preventDefault();
+      console.log(document.getElementById('examName').value + " Huththo");
+      fetch('http://localhost:3000/api/instructor/exams/update-exam/' + e.target.value, {
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          "dueDate": document.getElementById('examName').value
+        })
+      }).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        alert('update success  ' + json);
+      }).catch(function (err) {
+        alert('update success  ');
+      });
+    }
+  }, {
+    key: "handleChange",
+    value: function handleChange(e) {
+      this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null), _react.default.createElement("div", {
+        className: "container"
+      }, _react.default.createElement("div", {
+        className: "card text-center"
+      }, _react.default.createElement("h1", {
+        className: "card-header"
+      }, this.props.location.courseName), _react.default.createElement("hr", null), _react.default.createElement("div", {
+        className: "card-body"
+      }, _react.default.createElement("h3", {
+        className: "card-title"
+      }, "Notices"), _react.default.createElement("table", {
+        className: "table table-striped"
+      }, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Topic"), _react.default.createElement("th", null, "Description"), _react.default.createElement("th", null, "Date"), _react.default.createElement("th", null), _react.default.createElement("th", null))), _react.default.createElement("tbody", null, this.state.notices.map(function (notice) {
+        return _react.default.createElement("tr", null, _react.default.createElement("td", null, notice.topic), _react.default.createElement("td", null, notice.description), _react.default.createElement("td", null, notice.date), _react.default.createElement("th", null));
+      })))), _react.default.createElement("div", {
+        className: "card-body"
+      }, _react.default.createElement("h3", {
+        className: "card-title"
+      }, "Materials"), _react.default.createElement("table", {
+        className: "table table-striped"
+      }, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Lecture Name"), _react.default.createElement("th", null, "week"), _react.default.createElement("th", null, "file"), _react.default.createElement("th", null), _react.default.createElement("th", null))), _react.default.createElement("tbody", null, this.state.materials.map(function (material) {
+        return _react.default.createElement("tr", null, _react.default.createElement("td", null, material.lectureName), _react.default.createElement("td", null, material.week), _react.default.createElement("td", null, material.file), _react.default.createElement("th", null));
+      }))), _react.default.createElement("div", {
+        className: "card-body"
+      }, _react.default.createElement("h3", {
+        className: "card-title"
+      }, "Assignment Details"), _react.default.createElement("table", {
+        className: "table table-striped"
+      }, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Name"), _react.default.createElement("th", null, "File"), _react.default.createElement("th", null, "Due Date"), _react.default.createElement("th", null), _react.default.createElement("th", null))), _react.default.createElement("tbody", null, this.state.assignments.map(function (assignments) {
+        return _react.default.createElement("tr", null, _react.default.createElement("td", null, assignments.name), _react.default.createElement("td", null, assignments.file), _react.default.createElement("td", {
+          id: assignments._id
+        }, assignments.dueDate), _react.default.createElement("th", null, _react.default.createElement("input", {
+          type: "date",
+          id: "courseName"
+        }), _react.default.createElement("button", {
+          type: "button",
+          className: "btn btn-dark",
+          value: assignments._id,
+          onClick: function onClick(e) {
+            return _this3.onSubmitAssignmentSubmit(e);
+          }
+        }, "Update")));
+      })))), _react.default.createElement("div", {
+        className: "card-body"
+      }, _react.default.createElement("h3", {
+        className: "card-title"
+      }, "Exam Details"), _react.default.createElement("table", {
+        className: "table table-striped"
+      }, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Name"), _react.default.createElement("th", null, "Due Date"), _react.default.createElement("th", null, "File"), _react.default.createElement("th", null), _react.default.createElement("th", null))), _react.default.createElement("tbody", null, this.state.exams.map(function (exams) {
+        return _react.default.createElement("tr", null, _react.default.createElement("td", null, exams.name), _react.default.createElement("td", null, exams.dueDate), _react.default.createElement("td", null, exams.file), _react.default.createElement("th", null, _react.default.createElement("input", {
+          type: "date",
+          id: "examName"
+        }), _react.default.createElement("button", {
+          type: "button",
+          className: "btn btn-dark",
+          value: exams._id,
+          onClick: function onClick(e) {
+            return _this3.onSubmitExamSubmit(e);
+          }
+        }, "Update")));
+      })))), _react.default.createElement("div", {
+        className: "card-body"
+      }, _react.default.createElement("h3", {
+        className: "card-title"
+      }, "Results"), _react.default.createElement("table", {
+        className: "table table-striped"
+      }, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Description"), _react.default.createElement("th", null, "File"), _react.default.createElement("th", null), _react.default.createElement("th", null))), _react.default.createElement("tbody", null, this.state.results.map(function (results) {
+        return _react.default.createElement("tr", null, _react.default.createElement("td", null, results.description), _react.default.createElement("td", null, results.file), _react.default.createElement("th", null));
+      }))))))));
+    }
+  }]);
+
+  return AllDetails;
+}(_react.Component);
+
+var _default = AllDetails;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","../NavBar":"../Interfaces/NavBar.js"}],"../Interfaces/Views/ViewAnswers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _NavBar = _interopRequireDefault(require("../NavBar"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var ViewAnswers =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ViewAnswers, _Component);
+
+  function ViewAnswers() {
+    _classCallCheck(this, ViewAnswers);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ViewAnswers).apply(this, arguments));
+  }
+
+  _createClass(ViewAnswers, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null));
+    }
+  }]);
+
+  return ViewAnswers;
+}(_react.Component);
+
+var _default = ViewAnswers;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","../NavBar":"../Interfaces/NavBar.js"}],"App.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43001,8 +45620,6 @@ var _Notifications = _interopRequireDefault(require("../Interfaces/Notifications
 
 var _InstructorCorner = _interopRequireDefault(require("../Interfaces/InstructorCorner"));
 
-var _Modules = _interopRequireDefault(require("../Interfaces/Modules"));
-
 require("./App.css");
 
 require("../node_modules/bootstrap/dist/css/bootstrap.min.css");
@@ -43012,6 +45629,14 @@ var _Assignments = _interopRequireDefault(require("../Interfaces/Views/Assignmen
 var _Exams = _interopRequireDefault(require("../Interfaces/Views/Exams"));
 
 var _Notices = _interopRequireDefault(require("../Interfaces/Views/Notices"));
+
+var _Results = _interopRequireDefault(require("../Interfaces/Views/Results"));
+
+var _Materials = _interopRequireDefault(require("../Interfaces/Views/Materials"));
+
+var _AllDetails = _interopRequireDefault(require("../Interfaces/Views/AllDetails"));
+
+var _ViewAnswers = _interopRequireDefault(require("../Interfaces/Views/ViewAnswers"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43097,9 +45722,6 @@ function (_Component) {
         path: "/instructorCorner",
         component: _InstructorCorner.default
       }), _react.default.createElement(_reactRouterDom.Route, {
-        path: "/modules",
-        component: _Modules.default
-      }), _react.default.createElement(_reactRouterDom.Route, {
         path: "/assignments",
         component: _Assignments.default
       }), _react.default.createElement(_reactRouterDom.Route, {
@@ -43108,6 +45730,18 @@ function (_Component) {
       }), _react.default.createElement(_reactRouterDom.Route, {
         path: "/notices",
         component: _Notices.default
+      }), _react.default.createElement(_reactRouterDom.Route, {
+        path: "/results",
+        component: _Results.default
+      }), _react.default.createElement(_reactRouterDom.Route, {
+        path: "/materials",
+        component: _Materials.default
+      }), _react.default.createElement(_reactRouterDom.Route, {
+        path: "/allDetails/:course",
+        component: _AllDetails.default
+      }), _react.default.createElement(_reactRouterDom.Route, {
+        path: "/viewAnswers",
+        component: _ViewAnswers.default
       }))));
     }
   }]);
@@ -43116,7 +45750,7 @@ function (_Component) {
 }(_react.Component);
 
 exports.default = App;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../Interfaces/Home":"../Interfaces/Home.js","../Interfaces/NavBar":"../Interfaces/NavBar.js","../Interfaces/Profile":"../Interfaces/Profile.js","../Interfaces/Courses":"../Interfaces/Courses.js","../Interfaces/Notifications":"../Interfaces/Notifications.js","../Interfaces/InstructorCorner":"../Interfaces/InstructorCorner.js","../Interfaces/Modules":"../Interfaces/Modules.js","./App.css":"App.css","../node_modules/bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css","../Interfaces/Views/Assignments":"../Interfaces/Views/Assignments.js","../Interfaces/Views/Exams":"../Interfaces/Views/Exams.js","../Interfaces/Views/Notices":"../Interfaces/Views/Notices.js"}],"index.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../Interfaces/Home":"../Interfaces/Home.js","../Interfaces/NavBar":"../Interfaces/NavBar.js","../Interfaces/Profile":"../Interfaces/Profile.js","../Interfaces/Courses":"../Interfaces/Courses.js","../Interfaces/Notifications":"../Interfaces/Notifications.js","../Interfaces/InstructorCorner":"../Interfaces/InstructorCorner.js","./App.css":"App.css","../node_modules/bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css","../Interfaces/Views/Assignments":"../Interfaces/Views/Assignments.js","../Interfaces/Views/Exams":"../Interfaces/Views/Exams.js","../Interfaces/Views/Notices":"../Interfaces/Views/Notices.js","../Interfaces/Views/Results":"../Interfaces/Views/Results.js","../Interfaces/Views/Materials":"../Interfaces/Views/Materials.js","../Interfaces/Views/AllDetails":"../Interfaces/Views/AllDetails.js","../Interfaces/Views/ViewAnswers":"../Interfaces/Views/ViewAnswers.js"}],"index.jsx":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -43158,7 +45792,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56259" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51808" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -2,32 +2,108 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6cb9501-0d5e-4bb8-8204-0b852e8b6a6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/Courses.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/InstructorCorner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/Modules.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/Notifications.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/Profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/Views/Assignments.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/aflogo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/pic01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/pic02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/pic03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/rainbow_book.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Node.Controller/MaterialConroller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Node.Controller/NoticeController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Node.Repository/AssignmentDetailsRepo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Node.Repository/ExamRepo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Node.Repository/NoticeRepo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Node.Schema/InstructorSchema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/InstructorRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interfaces/Views/Results.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Node.Controller/FacultyController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Node.Controller/SpecializationController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Node.Repository/FacultyRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Node.Repository/SpecializationRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/00/2c6821dff6fb604eaff2c778a999c2.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/00/2c6821dff6fb604eaff2c778a999c2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/03/89acd99bae72cc643343ef671fdda7.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/03/89acd99bae72cc643343ef671fdda7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/05/586c72c615b1d996ab263858902fb3.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/05/586c72c615b1d996ab263858902fb3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/06/f3bda48cfbc75c1d00068aeb7d1942.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/06/f3bda48cfbc75c1d00068aeb7d1942.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/12/1ebe91def5327fa2dcf4ab3b88cf91.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/12/1ebe91def5327fa2dcf4ab3b88cf91.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/1a/842048f2cf71d9b6869a2b62af714c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/1a/842048f2cf71d9b6869a2b62af714c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/1b/ed3632212ea602ee64ab28c579b8a2.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/1b/ed3632212ea602ee64ab28c579b8a2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/1f/2f7aa432f837139f71d163f7597526.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/1f/2f7aa432f837139f71d163f7597526.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/1f/c5e3f4215358222f0a886368127f00.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/1f/c5e3f4215358222f0a886368127f00.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/20/158ed6b216d96cf0f3e049ee02649e.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/20/158ed6b216d96cf0f3e049ee02649e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/20/86fd77bc225e439dc7ac95df9087cd.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/20/86fd77bc225e439dc7ac95df9087cd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/27/27c139cf615150d45cefecb0c76461.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/27/27c139cf615150d45cefecb0c76461.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/2a/f049e48a50b4eb6a2b41dab5df6366.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/2a/f049e48a50b4eb6a2b41dab5df6366.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/2e/8c49df834fbf3d9303827122b75677.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/2e/8c49df834fbf3d9303827122b75677.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/2f/ca4dbf6676d01ba7c8a1d9f8e6755f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/2f/ca4dbf6676d01ba7c8a1d9f8e6755f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/40/b60c07732bc7d0f44874eab4fd1d68.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/40/b60c07732bc7d0f44874eab4fd1d68.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/44/6f09dabbb4b238e85385b4e0439abd.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/44/6f09dabbb4b238e85385b4e0439abd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/4f/160ce1702e8f69d55cf17fb83cb5cc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/4f/160ce1702e8f69d55cf17fb83cb5cc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/52/7093f2b866490e5869ffe3d7387a41.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/52/7093f2b866490e5869ffe3d7387a41.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/59/f9255b22046c22947cd556f56a5091.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/59/f9255b22046c22947cd556f56a5091.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/5a/04174cbe58deade6e13a430821c609.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/5a/04174cbe58deade6e13a430821c609.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/5a/5b0a93f664995d2209a1412dad3238.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/5a/5b0a93f664995d2209a1412dad3238.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/61/1b43fa0e934192faae88a27664f107.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/61/1b43fa0e934192faae88a27664f107.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/64/a1ebb6830860d1312bc7fa14b91405.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/64/a1ebb6830860d1312bc7fa14b91405.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/65/527287f1327b050792f26863f58693.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/65/527287f1327b050792f26863f58693.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/65/976db787356907d88d364ddd5ac384.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/65/976db787356907d88d364ddd5ac384.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/65/d4437131017902f14c6b8a316528c9.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/65/d4437131017902f14c6b8a316528c9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/66/a053091ac8f45956f0e0f1a4c03b2f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/66/a053091ac8f45956f0e0f1a4c03b2f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/74/ecbb5913853280c01b57f1dece04ab.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/74/ecbb5913853280c01b57f1dece04ab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/77/b71996919a7ed6c61cb5a87c6fc926.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/77/b71996919a7ed6c61cb5a87c6fc926.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/77/e3fa4ce6e5ac8f15c93ddeb6f273eb.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/77/e3fa4ce6e5ac8f15c93ddeb6f273eb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/7e/aa724845ca5fe53486d1cbafc1ca4c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/7e/aa724845ca5fe53486d1cbafc1ca4c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/7f/c0d1a6721bb0a3d01561987994ac15.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/7f/c0d1a6721bb0a3d01561987994ac15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/87/8c149b21ed716494dbf4c24da62d96.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/87/8c149b21ed716494dbf4c24da62d96.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/89/4769abc7e4e35f32b6d5c23464fa6d.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/89/4769abc7e4e35f32b6d5c23464fa6d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/90/cb72a96b196f61c4f51f616c8cfe34.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/90/cb72a96b196f61c4f51f616c8cfe34.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/94/b04266b9257bfa5b7c82f755d8a70b.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/94/b04266b9257bfa5b7c82f755d8a70b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/95/5c73fea2a3a17c45379f5cea6e69d0.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/95/5c73fea2a3a17c45379f5cea6e69d0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/96/6a341af14a9183bc035663127c39d3.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/96/6a341af14a9183bc035663127c39d3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/9a/40f21b011079439c13d24a6be2c2aa.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/9a/40f21b011079439c13d24a6be2c2aa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/9b/560f9100e1a7588059132c7d0b3537.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/9b/560f9100e1a7588059132c7d0b3537.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/9c/07053d2cc9cbdcc844a1455c7fc95a.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/9c/07053d2cc9cbdcc844a1455c7fc95a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/9d/a65bafedfb4cf797a7810fd51fb329.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/9d/a65bafedfb4cf797a7810fd51fb329.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/9e/6ffc2040fafe0da5bcc161cb280284.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/9e/6ffc2040fafe0da5bcc161cb280284.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/a0/e2b165f22f3cc3f2d84abdcc26140f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/a0/e2b165f22f3cc3f2d84abdcc26140f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/a5/4dee533d2bbda366b1b06b84057a46.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/a5/4dee533d2bbda366b1b06b84057a46.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/a9/8b9ca0a4e4a0ecc1428461908d7db3.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/a9/8b9ca0a4e4a0ecc1428461908d7db3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ad/93f8641fa61d3a1fda6ffddc6b728c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ad/93f8641fa61d3a1fda6ffddc6b728c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ae/1ccea3a38df3670c91a62842d0e42f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ae/1ccea3a38df3670c91a62842d0e42f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/af/c3599c7b2ba193e3341287deb18106.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/af/c3599c7b2ba193e3341287deb18106.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/b2/90a396015f1504770097fddc4b9a6d.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/b2/90a396015f1504770097fddc4b9a6d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/bb/5a497f19fbc50ed76292cc86059205.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/bb/5a497f19fbc50ed76292cc86059205.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ca/e121b5700c79035e66e922c045c377.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ca/e121b5700c79035e66e922c045c377.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/cb/61a58ac4c39665387c105a65d09393.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/cb/61a58ac4c39665387c105a65d09393.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ce/bce00a010744a0489a2df0c826edb6.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ce/bce00a010744a0489a2df0c826edb6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/d2/0eb85ef786e50bbe22aab3d9e27e1c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/d2/0eb85ef786e50bbe22aab3d9e27e1c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/da/3aac8ff984adca9429265afa4c6a7e.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/da/3aac8ff984adca9429265afa4c6a7e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/dd/7b68fb23f0950582117ac51302b9a4.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/dd/7b68fb23f0950582117ac51302b9a4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/de/8dfdc0b12abf448cd125ffa8794fff.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/de/8dfdc0b12abf448cd125ffa8794fff.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/e4/3eba448ae0b5b05e69f1562b223f82.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/e4/3eba448ae0b5b05e69f1562b223f82.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ea/124554a71ebb85dec7745914ffec78.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ea/124554a71ebb85dec7745914ffec78.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ea/d87dbbca23ca504a79785ca39a4722.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ea/d87dbbca23ca504a79785ca39a4722.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/eb/f97444ec8fa9d01037a501203fc63b.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/eb/f97444ec8fa9d01037a501203fc63b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ec/b4819bf2ceb33dbec75ac555b1e8d4.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ec/b4819bf2ceb33dbec75ac555b1e8d4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ed/07119b1472f44a5ba16251fdd72865.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ed/07119b1472f44a5ba16251fdd72865.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f2/0ba371cb3a021ab44bd7b22da58ec8.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f2/0ba371cb3a021ab44bd7b22da58ec8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f8/9a110b2ac1fdbcac04c2baa0d73c1d.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f8/9a110b2ac1fdbcac04c2baa0d73c1d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/fa/6786f3e718b80207ea739e947a35bd.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/fa/6786f3e718b80207ea739e947a35bd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/fd/92e754cc78181eb5a2d51e524cc16a.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/fd/92e754cc78181eb5a2d51e524cc16a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/Courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/Courses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/InstructorCorner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/InstructorCorner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/Modules.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/Views/Assignments.js" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/Views/Assignments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/Views/Exams.js" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/Views/Exams.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/Views/Notices.js" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/Views/Notices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Node.Controller/AssignmentDetailsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Node.Controller/AssignmentDetailsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Node.Controller/ExamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Node.Controller/ExamController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Node.Controller/MaterialConroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Node.Controller/MaterialConroller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Node.Controller/NoticeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Node.Controller/NoticeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Node.Controller/ResultsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Node.Controller/ResultsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Node.Repository/AssignmentDetailsRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Node.Repository/AssignmentDetailsRepo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Node.Repository/ExamRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Node.Repository/ExamRepo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Node.Repository/MaterialRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Node.Repository/MaterialRepo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Node.Repository/NoticeRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Node.Repository/NoticeRepo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Node.Repository/ResultsRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Node.Repository/ResultsRepo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Node.Schema/InstructorSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Node.Schema/InstructorSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/InstructorRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/InstructorRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public.78399e21.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/public.78399e21.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public.78399e21.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/public.78399e21.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public.78399e21.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/public.78399e21.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public.78399e21.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/public.78399e21.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -40,12 +116,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Interfaces/Views/AllDetails.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="238" column="44" lean-forward="true" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Interfaces/Views/Assignments.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="16" column="24" selection-end-line="52" selection-end-column="27" />
+            <state relative-caret-position="527">
+              <caret line="134" column="111" selection-start-line="134" selection-start-column="111" selection-end-line="134" selection-end-column="111" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -54,64 +142,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Interfaces/Views/Exams.js">
+        <entry file="file://$PROJECT_DIR$/app/Node.Repository/AssignmentDetailsRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="30" selection-end-line="52" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Interfaces/Views/Notices.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="347">
+              <caret line="61" column="6" selection-start-line="44" selection-start-column="3" selection-end-line="61" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Node.Controller/NoticeController.js">
+        <entry file="file://$PROJECT_DIR$/app/Node.Controller/AssignmentDetailsController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="20" selection-end-column="3" />
+            <state relative-caret-position="205">
+              <caret line="84" selection-start-line="84" selection-end-line="93" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Node.Repository/NoticeRepo.js">
+        <entry file="file://$PROJECT_DIR$/app/Node.Controller/ExamController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+            <state relative-caret-position="138">
+              <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/App.jsx">
+        <entry file="file://$PROJECT_DIR$/app/Node.Repository/ExamRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="118" selection-start-line="5" selection-start-column="118" selection-end-line="5" selection-end-column="118" />
+            <state relative-caret-position="260">
+              <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -132,44 +193,60 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/Node.Repository/CourseRepo.js" />
         <option value="$PROJECT_DIR$/app/Node.Controller/ExamRepo.js" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/fileUpload.js" />
-        <option value="$PROJECT_DIR$/app/Node.Controller/NoticeController.js" />
-        <option value="$PROJECT_DIR$/app/Node.Controller/CourseController.js" />
-        <option value="$PROJECT_DIR$/app/Node.Controller/MaterialConroller.js" />
-        <option value="$PROJECT_DIR$/app/Node.Controller/ResultsController.js" />
-        <option value="$PROJECT_DIR$/app/Node.Controller/AssignmentDetailsController.js" />
         <option value="G:/Sachith/course.Schema/course.Schema/CourseSchema.js" />
-        <option value="$PROJECT_DIR$/app/routes/InstructorRoutes.js" />
-        <option value="$PROJECT_DIR$/app/Node.Schema/InstructorSchema.js" />
-        <option value="$PROJECT_DIR$/app/Node.Repository/MaterialRepo.js" />
-        <option value="$PROJECT_DIR$/app/Node.Repository/AssignmentDetailsRepo.js" />
-        <option value="$PROJECT_DIR$/app/Node.Repository/ExamRepo.js" />
-        <option value="$PROJECT_DIR$/app/Node.Repository/ResultsRepo.js" />
-        <option value="$PROJECT_DIR$/app/Node.Controller/ExamController.js" />
         <option value="$PROJECT_DIR$/public/javaScript/fileUpload.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/Interfaces/Views/Assignments.js" />
-        <option value="$PROJECT_DIR$/Interfaces/Views/Exams.js" />
-        <option value="$PROJECT_DIR$/public/App.jsx" />
-        <option value="$PROJECT_DIR$/app/Node.Repository/NoticeRepo.js" />
+        <option value="$PROJECT_DIR$/app/Node.Controller/CourseController.js" />
+        <option value="$PROJECT_DIR$/app/Node.Repository/CourseRepo.js" />
+        <option value="$PROJECT_DIR$/Interfaces/Profile.js" />
+        <option value="$PROJECT_DIR$/Interfaces/Views/AllCourses.js" />
         <option value="$PROJECT_DIR$/Interfaces/Views/Notices.js" />
+        <option value="$PROJECT_DIR$/app/Node.Controller/SpecializationController.js" />
+        <option value="$PROJECT_DIR$/app/Node.Repository/FacultyRepository.js" />
+        <option value="$PROJECT_DIR$/app/Node.Repository/SpecializationRepository.js" />
+        <option value="$PROJECT_DIR$/app/Node.Controller/FacultyController.js" />
+        <option value="$PROJECT_DIR$/app/routes/InstructorRoutes.js" />
+        <option value="$PROJECT_DIR$/app/Node.Controller/NoticeController.js" />
+        <option value="$PROJECT_DIR$/app/Node.Repository/NoticeRepo.js" />
+        <option value="$PROJECT_DIR$/Interfaces/Views/UpdateNotice.js" />
+        <option value="$PROJECT_DIR$/Interfaces/Courses.js" />
+        <option value="$PROJECT_DIR$/Interfaces/Views/Added.js" />
+        <option value="$PROJECT_DIR$/app/Node.Schema/InstructorSchema.js" />
+        <option value="$PROJECT_DIR$/app/Node.Controller/MaterialConroller.js" />
+        <option value="$PROJECT_DIR$/app/Node.Repository/MaterialRepo.js" />
+        <option value="$PROJECT_DIR$/app/Node.Controller/ResultsController.js" />
+        <option value="$PROJECT_DIR$/app/Node.Repository/ResultsRepo.js" />
+        <option value="$PROJECT_DIR$/Interfaces/Views/Materials.js" />
+        <option value="$PROJECT_DIR$/Interfaces/Views/Results.js" />
+        <option value="$PROJECT_DIR$/public/App.jsx" />
+        <option value="$PROJECT_DIR$/Interfaces/Views/ViewAnswers.js" />
+        <option value="$PROJECT_DIR$/public/App.css" />
+        <option value="$PROJECT_DIR$/Interfaces/InstructorCorner.js" />
+        <option value="$PROJECT_DIR$/Interfaces/Views/Exams.js" />
+        <option value="$PROJECT_DIR$/Interfaces/Views/Assignments.js" />
+        <option value="$PROJECT_DIR$/app/Node.Controller/AssignmentDetailsController.js" />
+        <option value="$PROJECT_DIR$/app/Node.Repository/AssignmentDetailsRepo.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/app/Node.Repository/ExamRepo.js" />
+        <option value="$PROJECT_DIR$/app/Node.Controller/ExamController.js" />
+        <option value="$PROJECT_DIR$/Interfaces/Views/AllDetails.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="652" />
+    <option name="x" value="625" />
     <option name="y" value="11" />
-    <option name="width" value="1335" />
-    <option name="height" value="993" />
+    <option name="width" value="1380" />
+    <option name="height" value="995" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,6 +274,18 @@
             <path>
               <item name="AF-Student-Instructor-System" type="b2602c69:ProjectViewProjectNode" />
               <item name="AF-Student-Instructor-System" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Node.Schema" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AF-Student-Instructor-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AF-Student-Instructor-System" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AF-Student-Instructor-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AF-Student-Instructor-System" type="462c0819:PsiDirectoryNode" />
               <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -214,25 +303,26 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Documents/Workspace/af_project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Documents/Workspace/DSEasyBooking" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SLIIT\3rd year\1st Semester\AF\project\AF-Student-Instructor-System\app\Node.Repository" />
+      <recent name="D:\SLIIT\3rd year\1st Semester\AF\project\AF-Student-Instructor-System\app\Node.Controller" />
+      <recent name="D:\SLIIT\3rd year\1st Semester\AF\project\AF-Student-Instructor-System" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\SLIIT\3rd year\1st Semester\AF\project\AF-Student-Instructor-System\public\javaScript" />
       <recent name="D:\SLIIT\3rd year\1st Semester\AF\project\AF-Student-Instructor-System\app\Node.Repository" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\SLIIT\3rd year\1st Semester\AF\project\AF-Student-Instructor-System" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -258,22 +348,25 @@
       <option name="presentableId" value="Default" />
       <updated>1561015329362</updated>
       <workItem from="1561015331275" duration="26665000" />
+      <workItem from="1561130190378" duration="42178000" />
+      <workItem from="1561221322931" duration="32546000" />
+      <workItem from="1561289615021" duration="14691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26665000" />
+    <option name="totallyTimeSpent" value="116080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.16325182" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.20819564" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3371105" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.23229462" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3286119" />
@@ -286,234 +379,121 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.1645737" />
-      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.26912183" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/../../labs/AAF-Lab05-part01/AAF-Lab05-part01/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="119">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/OneDrive/Documents/Workspace/final_exam_practice/node.schema/Schema.js">
+    <entry file="file://$PROJECT_DIR$/../../labs/Sachith/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" selection-start-line="35" selection-end-line="35" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/OneDrive/Documents/Workspace/final_exam_practice/node.Controller/CourseController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="28" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/OneDrive/Documents/Workspace/final_exam_practice/node.repository/CourseRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="51">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/OneDrive/Documents/Workspace/final_exam_practice/node.repository/SubjectRepository.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/OneDrive/Documents/Workspace/final_exam_practice/node.Controller/SubjectController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Node.Repository/CourseRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/OneDrive/Desktop/Sachith/course.Schema/CourseTest.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/OneDrive/Desktop/Sachith/course.Schema/CourseSchema.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Node.Controller/AssignmentDetailsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Node.Controller/ResultsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Node.Controller/CourseController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="255">
+          <caret line="15" column="51" lean-forward="true" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/10.15.3/core-modules/internal/modules/cjs/loader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="711" column="9" selection-start-line="711" selection-start-column="9" selection-end-line="711" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Node.Controller/MaterialConroller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        <state relative-caret-position="159">
+          <caret line="700" column="29" selection-start-line="700" selection-start-column="29" selection-end-line="700" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/error/missingSchema.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
+        <state relative-caret-position="166">
           <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/index.js">
+    <entry file="file://$PROJECT_DIR$/Interfaces/Modules.js" />
+    <entry file="file://H:/FileUploader.js" />
+    <entry file="file://$PROJECT_DIR$/Interfaces/NavBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="451" column="12" selection-start-line="451" selection-start-column="12" selection-end-line="451" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Sachith/course.Schema/course.Schema/CourseSchema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3427">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Node.Repository/AssignmentDetailsRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Node.Repository/MaterialRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Node.Repository/ResultsRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Node.Repository/ExamRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Node.Controller/ExamController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/InstructorRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Node.Schema/InstructorSchema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Interfaces/Courses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="336">
+          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javaScript/fileUpload.js">
+    <entry file="file://$PROJECT_DIR$/app/Node.Repository/FacultyRepository.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://H:/FileUploader.js">
+    <entry file="file://$PROJECT_DIR$/app/Node.Repository/SpecializationRepository.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        <state relative-caret-position="102">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Controller/FacultyController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Controller/SpecializationController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/Profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="34" column="57" lean-forward="true" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/Notifications.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="22" selection-start-line="8" selection-start-column="16" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Repository/CourseRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/OneDrive/Desktop/Courses.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="102" column="45" lean-forward="true" selection-start-line="102" selection-start-column="45" selection-end-line="102" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/Views/UpdateNotice.js" />
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -521,61 +501,237 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Interfaces/Views/Assignments.js">
+    <entry file="file://H:/uploads/CourseAssignmentStudentUpload.js" />
+    <entry file="file://$PROJECT_DIR$/Interfaces/Views/Added.js" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/10.15.3/core-modules/_http_server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="16" column="24" selection-end-line="52" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="172">
+          <caret line="208" column="10" selection-start-line="208" selection-start-column="10" selection-end-line="208" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/App.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://H:/uploads/SUploadAssignment.js" />
+    <entry file="file://H:/uploads/StudentController.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/parcel-bundler/src/Bundler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="297" column="13" selection-start-line="297" selection-start-column="13" selection-end-line="297" selection-end-column="13" />
+        <state relative-caret-position="206">
+          <caret line="299" lean-forward="true" selection-start-line="299" selection-end-line="299" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/Views/Results.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Repository/ResultsRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="50" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Controller/ResultsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="81" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Controller/CourseController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Controller/MaterialConroller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="44" column="53" lean-forward="true" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Node.Controller/NoticeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="20" selection-end-column="3" />
+        <state relative-caret-position="205">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/InstructorCorner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Node.Repository/NoticeRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+        <state relative-caret-position="-696">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Interfaces/Views/Exams.js">
+    <entry file="file://$PROJECT_DIR$/public/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="30" selection-end-line="52" selection-end-column="21" />
+        <state relative-caret-position="273">
+          <caret line="56" column="49" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="49" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="334" selection-start-line="334" selection-end-line="335" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Repository/MaterialRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Interfaces/Views/Notices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="341">
+          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/Courses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Schema/InstructorSchema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/InstructorRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/Views/ViewAnswers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/Views/Materials.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/Views/Exams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/Views/Assignments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="134" column="111" selection-start-line="134" selection-start-column="111" selection-end-line="134" selection-end-column="111" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Controller/AssignmentDetailsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="84" selection-start-line="84" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Repository/AssignmentDetailsRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="61" column="6" selection-start-line="44" selection-start-column="3" selection-end-line="61" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Repository/ExamRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Node.Controller/ExamController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces/Views/AllDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="238" column="44" lean-forward="true" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

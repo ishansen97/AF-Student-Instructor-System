@@ -6,12 +6,16 @@ import Profile from '../Interfaces/Profile'
 import Courses from "../Interfaces/Courses";
 import Notifications from "../Interfaces/Notifications";
 import InstructorCorner from "../Interfaces/InstructorCorner";
-import Modules from "../Interfaces/Modules";
 import './App.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Assignments from "../Interfaces/Views/Assignments";
 import Exams from "../Interfaces/Views/Exams";
 import Notices from "../Interfaces/Views/Notices";
+import Results from "../Interfaces/Views/Results";
+import Materials from "../Interfaces/Views/Materials";
+import AllDetails from "../Interfaces/Views/AllDetails";
+import ViewAnswers from "../Interfaces/Views/ViewAnswers";
+
 
 export default class App extends Component {
     constructor(props) {
@@ -44,10 +48,13 @@ export default class App extends Component {
                         <Route path="/courses" component={Courses}/>
                         <Route path="/notifications" component={Notifications}/>
                         <Route path="/instructorCorner" component={InstructorCorner}/>
-                        <Route path='/modules' component={Modules}/>
                         <Route path='/assignments' component={Assignments}/>
                         <Route path='/exams' component={Exams}/>
                         <Route path='/notices' component={Notices}/>
+                        <Route path='/results' component={Results}/>
+                        <Route path='/materials' component={Materials}/>
+                        <Route path='/allDetails/:course' component={AllDetails}/>
+                        <Route path='/viewAnswers' component={ViewAnswers}/>
                     </Switch>
                 </Router>
             </div>

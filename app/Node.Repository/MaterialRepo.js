@@ -3,13 +3,13 @@ const materialSchema = mongoose.model('materials');
 
 const materialRepo = function () {
 
-    this.insertMaterial = (material)=>{
+    this.insertMaterial = (lectureName, week, file, course)=>{
         return new Promise((resolve , reject)=>{
             const newMaterial = new materialSchema({
-                lecureName : material.lecureName,
-                week : material.week,
-                file: material.file,
-                courses: material.course
+                lectureName : lectureName,
+                week : week,
+                file: file,
+                courses: courses
             });
             newMaterial.save().then(()=>{
                 resolve({status:200 , message: 'material added'});
@@ -18,17 +18,18 @@ const materialRepo = function () {
             })
         })
     };
-    this.getmaterialById = (material) =>{
+
+    this.getmaterialByName = (course) =>{
         return new Promise((resolve, reject) => {
-            materialSchema.find({id}).populate('courses').then((data)=>{
-                resolve({status : 200 , courses : data});
+            materialSchema.find({courses:course}).then((data)=>{
+                resolve({status : 200 , message : data});
             }).catch(err=>{
                 reject({status:500 , message: err});
             })
         })
     };
 
-    this.getmaterial = ()=>{
+   /* this.getmaterial = ()=>{
         return new Promise((resolve , reject) =>{
             materialSchema.find().exec().then((data)=>{
                 resolve({status: 200 , material:data});
@@ -36,7 +37,21 @@ const materialRepo = function () {
                 reject({status:500 , message: err});
             })
         })
-    }
+    };*/
+
+    this.updateMaterials = (materials) =>{
+        return new Promise((resolve, reject) => {
+            materialSchema.findOneAndUpdate(
+                {_id:materials.id},
+                {file:materials.file})
+                .then((data) => {
+                resolve({status: 200, notice: data});
+            }).catch(err => {
+                reject({status: 500, message: err});
+            })
+        })
+    };
+
 };
 
 

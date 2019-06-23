@@ -1,17 +1,18 @@
 const mongoose = require('../Node.Schema/InstructorSchema');
+mongoose.set('useFindAndModify', false);
 const assignmentDetails = mongoose.model('assignments');
 
 const assignmentRepo = function () {
 
-    this.insertAssignments = (assignment)=>{
+    this.insertAssignments = (name , file, dueDate, timeRemaining ,fileToSubmit,courses )=>{
         return new Promise((resolve , reject)=>{
             const newAssignment = new assignmentDetails({
-                name : assignment.name,
-                descriptionFile: assignment.descriptionFile,
-                dueDate : assignment.dueDate,
-                timeRemaining:assignment.timeRemaining ,
-                fileToSubmit :assignment.fileToSubmit,
-                courses: assignment.course
+                name : name,
+                file: file,
+                dueDate : dueDate,
+                timeRemaining:timeRemaining ,
+                fileToSubmit :fileToSubmit,
+                courses: courses
             });
             newAssignment.save().then(()=>{
                 resolve({status:200 , message: 'Assignment added'});
@@ -20,10 +21,10 @@ const assignmentRepo = function () {
             })
         })
     };
-    this.getassignmentById = (assignment) =>{
+    this.getassignmentByName = (assignment) =>{
         return new Promise((resolve, reject) => {
-            assignmentDetails.find({id}).populate('courses').then((data)=>{
-                resolve({status : 200 , courses : data});
+            assignmentDetails.find({courses:assignment}).then((data)=>{
+                resolve({status : 200 , message : data});
             }).catch(err=>{
                 reject({status:500 , message: err});
             })
@@ -38,7 +39,27 @@ const assignmentRepo = function () {
                 reject({status:500 , message: err});
             })
         })
-    }
+    };
+
+
+    this.updateAssignment = (name, assignment) =>{
+        return new Promise((resolve, reject) => {
+            assignmentDetails.findOneAndUpdate
+            (
+                {
+                    _id : name
+                },
+                {
+                dueDate:assignment.dueDate
+                }
+                )
+                .then(() => {
+                resolve({status: 200, message: "added"});
+            }).catch(err => {
+                reject({status: 500, message: err});
+            })
+        })
+    };
 };
 
 

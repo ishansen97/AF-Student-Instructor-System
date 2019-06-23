@@ -8,20 +8,7 @@ class Profile extends Component {
         super(props);
         this.state = {
             show: true,
-            courses:[
-                {
-                    id :"SE3010",
-                    name : "Application Frameworks"
-                },
-                {
-                    id :"SE3020",
-                    name : "Distributed Systems"
-                },
-                {
-                    id :"SE3030",
-                    name : "Software Architecture"
-                }
-            ]
+            courses:[]
         };
     }
 
@@ -39,7 +26,7 @@ class Profile extends Component {
                     <h1>Profile</h1>
 <hr/>
                     <div className="row">
-                        <div className="col-sm" style={{padding: "25px"}}>
+                        <div className="col-sm" style={{padding: "10px"}}>
                             <div className="card text-white bg-secondary mb-3">
                                 <div className="card-header">
                                     <h2>Instructor Details</h2>
@@ -102,22 +89,6 @@ class Profile extends Component {
                                                 :null
                                      }
                                    {/* <button className="btn btn-dark" onClick={() => this.showEdit()}>Edit</button>*/}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col" style={{padding: "15px"}}>
-                            <div className="card text-white bg-dark mb-3" style={{maxWidth: "60rem"}}>
-                                <div className="card-header">
-                                    <ul className="list-group">
-                                        <li className="list-group-item list-group-item-dark text-black-50">
-                                            {this.state.courses.map( (item, i) =>
-                                                <Link to={{pathname:"/modules",propName:item.name}} className="nav-link text-white ml-4">
-                                                    <h4 key={i} className="card-header"><i className="fas fa-book">&nbsp;&nbsp;</i>{item.name}</h4>
-                                                </Link>
-                                            )}
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>

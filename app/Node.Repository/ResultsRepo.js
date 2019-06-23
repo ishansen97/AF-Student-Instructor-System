@@ -3,14 +3,14 @@ const resultsDetailsSchema = mongoose.model('results');
 
 const resultsRepo = function () {
 
-    this.insertResults = (results)=>{
+    this.insertResult = (description, file,courses)=>{
         return new Promise((resolve , reject)=>{
-            const newCourse = new resultsDetailsSchema({
-                description : results.description,
-                fileToSubmit : results.fileToSubmit,
-                courses: results.course
+            const newMaterial = new resultsDetailsSchema({
+                description : description,
+                file: file,
+                courses: courses
             });
-            newCourse.save().then(()=>{
+            newMaterial.save().then(()=>{
                 resolve({status:200 , message: 'result added'});
             }).catch(err=>{
                 reject({status: 500, message: 'Error: ' +err})
@@ -26,7 +26,31 @@ const resultsRepo = function () {
                 reject({status:500 , message: err});
             })
         })
-    }
+    };
+
+    this.getResultsByName = (results) => {
+        return new Promise((resolve, reject) => {
+            resultsDetailsSchema.find({courses: results}).then((data) => {
+                resolve({status: 200, message: data});
+            }).catch(err => {
+                reject({status: 500, message: err});
+            })
+        })
+
+    };
+
+    this.updateResults = (results) =>{
+        return new Promise((resolve, reject) => {
+            resultsDetailsSchema.findOneAndUpdate(
+                {_id:results.id},
+                {file:results.file})
+                .then(() => {
+                resolve({status: 200, notice: "added"});
+            }).catch(err => {
+                reject({status: 500, message: err});
+            })
+        })
+    };
 };
 
 

@@ -3,27 +3,27 @@ const examDetailsSchema = mongoose.model('exams');
 
 const examRepo = function () {
 
-    this.insertExams = (exams)=>{
+    this.insertExam = (name , file, dueDate, timeRemaining ,fileToSubmit,courses )=>{
         return new Promise((resolve , reject)=>{
-            const newExams = new examDetailsSchema({
-                name : exams.name,
-                descriptionFile: exams.descriptionFile,
-                dueDate : exams.dueDate,
-                timeRemaining:exams.timeRemaining ,
-                fileToSubmit :exams.fileToSubmit,
-                courses: exams.course
+            const newAssignment = new examDetailsSchema({
+                name : name,
+                file: file,
+                dueDate : dueDate,
+                timeRemaining:timeRemaining ,
+                fileToSubmit :fileToSubmit,
+                courses: courses
             });
-            newExams.save().then(()=>{
+            newAssignment.save().then(()=>{
                 resolve({status:200 , message: 'Exam added'});
             }).catch(err=>{
                 reject({status: 500, message: 'Error: ' +err})
             })
         })
     };
-    this.getExamsById = (exams) =>{
+    this.getExamsByName = (exams) =>{
         return new Promise((resolve, reject) => {
-            examDetailsSchema.find({id}).populate('courses').then((data)=>{
-                resolve({status : 200 , courses : data});
+            examDetailsSchema.find({courses:exams}).then((data)=>{
+                resolve({status : 200 , message : data});
             }).catch(err=>{
                 reject({status:500 , message: err});
             })
@@ -33,12 +33,32 @@ const examRepo = function () {
     this.getExams = ()=>{
         return new Promise((resolve , reject) =>{
             examDetailsSchema.find().exec().then((data)=>{
-                resolve({status: 200 , exams:data});
+                resolve({status: 200 , message:data});
             }).catch(err=>{
                 reject({status:500 , message: err});
             })
         })
-    }
+    };
+
+
+    this.updateExam = (name, exam) =>{
+        return new Promise((resolve, reject) => {
+            examDetailsSchema.findOneAndUpdate
+            (
+                {
+                    _id : name
+                },
+                {
+                    dueDate:exam.dueDate
+                }
+            )
+                .then(() => {
+                    resolve({status: 200, message: "added"});
+                }).catch(err => {
+                reject({status: 500, message: err});
+            })
+        })
+    };
 };
 
 

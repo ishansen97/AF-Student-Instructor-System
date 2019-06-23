@@ -12,9 +12,9 @@ const noticesSchema = new Schema({
 });
 
 const materialSchema = new Schema({
-   lectureName : String,
+    lectureName : String,
    week : String,
-   files: String,
+   file: String,
    courses :{
         type : Schema.Types.ObjectId,
         ref : 'course'
@@ -23,7 +23,7 @@ const materialSchema = new Schema({
 
 const assignmentDetailsSchema = new Schema({
    name : String,
-   descriptionFile: String,
+    file: String,
    dueDate : String,
    timeRemaining:String ,
    fileToSubmit :String,
@@ -36,7 +36,7 @@ const assignmentDetailsSchema = new Schema({
 
 const examDetailsSchema = new Schema({
     name : String,
-    descriptionFile: String,
+    file: String,
     dueDate : String,
     timeRemaining:String ,
     fileToSubmit :String,
@@ -49,7 +49,7 @@ const examDetailsSchema = new Schema({
 
 const resultsDetailsSchema = new Schema({
     description : String,
-    fileToSubmit :String,
+    file :String,
     courses :{
         type : Schema.Types.ObjectId,
         ref : 'course'
@@ -242,6 +242,8 @@ mongoose.model('materials' , materialSchema);
 mongoose.model('assignments' , assignmentDetailsSchema);
 mongoose.model('exams' , examDetailsSchema);
 mongoose.model('results' , resultsDetailsSchema);
+
+mongoose.model('courses' , CourseStructure);
 
 mongoose.model('student_details', studentDetailsSchema);
 mongoose.model('student_login', studentLogin);

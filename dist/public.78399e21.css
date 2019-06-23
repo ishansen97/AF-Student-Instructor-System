@@ -143,8 +143,12 @@
   width: 70%;
   margin: auto; }
 
+
 h3 {
-  text-align: center; }
+  text-align: center;
+  text-decoration-style: solid;
+
+}
 
 .each-slide > div {
   display: flex;

@@ -20,13 +20,25 @@ router.get('/get-notices' , (req,res,next) =>{
     })
 });
 
-router.get('/get-notices/:id' , (req,res,next) =>{
+router.get('/get-notices/:code' , (req,res,next) =>{
     const params = req.params;
-    NoticeRepo.getNoticesById(params.code).then((notice)=>{
+    console.log("invoked");
+    NoticeRepo.getNoticesByName(params.code).then((notice)=>{
+        res.status(notice.status).send(notice.message)
+    }).catch(err=>{
+        res.status(err.status).send(err.message);
+    })
+});
+
+router.put('/update-notice' , (req,res,next) =>{
+   console.log(req.body.id);
+    NoticeRepo.updateNotice(req.body).then((notice)=>{
         res.status(notice.status).send(notice.courses)
     }).catch(err=>{
         res.status(err.status).send(err.message);
     })
 });
+
+
 
 module.exports = router;
