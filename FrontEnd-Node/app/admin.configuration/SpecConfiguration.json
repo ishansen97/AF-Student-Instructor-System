@@ -1,0 +1,12 @@
+{
+  "idPattern": "SP",
+  "firstId": "0001",
+  "types": [
+    {
+      "type": "BSc"
+    },
+    {
+      "type": "MSc"
+    }
+  ]
+}

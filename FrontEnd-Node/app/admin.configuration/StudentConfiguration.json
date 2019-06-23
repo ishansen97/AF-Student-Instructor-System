@@ -1,0 +1,45 @@
+{
+  "patterns": [
+    {
+      "idPattern": "IT"
+    },
+    {
+      "idPattern": "SE"
+    },
+    {
+      "idPattern": "EN"
+    },
+    {
+      "idPattern": "BS"
+    },
+    {
+      "idPattern": "LB"
+    }
+  ],
+
+  "username_type": [
+    {
+      "type": "Student ID"
+    },
+    {
+      "type": "Email"
+    }
+  ],
+  "password_characters": [
+    {
+      "character": "numeric"
+    },
+    {
+      "character": "alphaNumeric"
+    },
+    {
+      "character": "string"
+    },
+    {
+      "character": "uppercase"
+    },
+    {
+      "character": "lowercase"
+    }
+  ]
+}
