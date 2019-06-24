@@ -192,12 +192,27 @@ router.get('/find_student_by_student_id/:id', (req, res) => {
         res.status(err.status).send(err.message)
     })
  });
- router.post('/update_student_details', (req, res)=> {
+router.post('/update_student_details', (req, res)=> {
     studentDetailsRepository.updateStudentDetails(req.body).then( data=>{
         res.status(data.status).send(data.message)
     }).catch(err =>{
         res.status(err.status).send(err.message)
     })
- });
+});
+router.post('/update_student_email', (req, res)=> {
+    studentDetailsRepository.updateStudentEmail(req.body).then( data=>{
+        res.status(data.status).send(data.message)
+    }).catch(err =>{
+        res.status(err.status).send(err.message)
+    })
+});
+
+router.post('/update_student_mobile', (req, res)=> {
+    studentDetailsRepository.updateStudentMobile(req.body).then( data=>{
+        res.status(data.status).send(data.message)
+    }).catch(err =>{
+        res.status(err.status).send(err.message)
+    })
+});
 
 module.exports = router;

@@ -5,6 +5,7 @@ import Img1 from '../images/slide_1.jpg';
 import Img2 from '../images/slide_2.jpg';
 import Img3 from '../images/slide_4.jpg';
 import '../App.css';
+import {STUDENT_SESSION} from "./studentLogin";
 
     const slideImages = [
         Img1,
@@ -20,6 +21,15 @@ import '../App.css';
         arrows: true
     };
     class Home extends Component {
+
+        componentDidMount() {
+            if(sessionStorage.getItem(STUDENT_SESSION) === null){
+                alert('logged out');
+                this.props.history.push("/")
+            }else{
+                // alert('your good');
+            }
+        }
 
         render() {
 

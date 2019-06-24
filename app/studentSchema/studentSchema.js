@@ -66,7 +66,8 @@ const studentDetailsSchema = new Schema(
         firstName: String,
         middleName:String,
         lastName:String,
-        email:String
+        email:String,
+        mobile:String
     }
 );
 

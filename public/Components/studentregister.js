@@ -122,17 +122,19 @@ class StudentRegister extends Component{
         }).then(jsonData => {
             console.log(jsonData)
         }).catch( err => {
-            console.log(err)
+            console.log(err);
+            this.props.history.push('/student_login')
         })
     }
 
     render() {
         return(
-            <div className="container-fluid">
+            <div>
                 <div className="card">
                     <h2 className="card-header">Registration Check</h2>
                     <input type="text" placeholder="Student ID" onChange={e => this.studentIDSet(e)} />
                     <button className="btn btn-info" onClick={e => this.onCheck(e)}>Check</button>
+                    <a href="http://localhost:4000/student_login">Already a student</a>
                 </div>
                 <div className="card" style={{display:this.state.showRegister}}>
                     <br/>
@@ -147,7 +149,7 @@ class StudentRegister extends Component{
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Password</label>
-                            <input type="text" className="form-control" id="exampleInputEmail1"
+                            <input type="password" className="form-control" id="exampleInputEmail1"
                                    aria-describedby="emailHelp" placeholder="Enter Password"
                                    onChange={e => {this.passwordChange(e)}}/>
                         </div>
@@ -181,7 +183,7 @@ class StudentRegister extends Component{
                                    aria-describedby="emailHelp" placeholder="Enter Mobile"
                                    onChange={e => {this.mobileChange(e)}}/>
                         </div>
-                        <button type="submit" className="btn btn-primary"
+                        <button type="submit" className="btn btn-secondary btn-lg btn-block"
                                 onClick={e => this.registerMe(e)}>Register</button>
 
                     </div>

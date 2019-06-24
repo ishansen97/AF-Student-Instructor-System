@@ -27,12 +27,15 @@ class Specializations extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <h2>Specializations</h2>
+                <h1 className="card-header bg-dark text-white">Specializations</h1>
                 {this.state.specializationsArr.map(specs =>
-                    <div>
-                        <Link to={{pathname: "/all_courses", moduleProps: {specs}}}>
-                            <li><i className="fas fa-book-open"
-                                   style={{size: "9x"}}/> &nbsp;{specs.name}</li>
+                    <div className="">
+                        <Link style={{textDecoration:"none"}} to={{pathname: "/all_courses", moduleProps: {specs}}}>
+                            {/*<li><i className="fas fa-book-open"*/}
+                                   {/*style={{size: "9x"}}/> &nbsp;{specs.name}</li>*/}
+                            <button type="button" className="btn btn-secondary btn-lg btn-block">
+                                {specs.name}
+                            </button>
                         </Link>
                     </div>
                 )}

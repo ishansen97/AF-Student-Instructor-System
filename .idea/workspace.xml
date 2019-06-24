@@ -2,20 +2,110 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d709252e-5913-4fc5-bc75-b229cc2ca181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/routes/message.server.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Components/Navbar/navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Components/studentCalander.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Components/studentHome.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/aflogo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/slide_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/slide_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/slide_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/00/3eb1c7803200ee0b5bb3f989062933.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/00/3eb1c7803200ee0b5bb3f989062933.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/00/dd57aeafcddb3adf4d5e57ab218693.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/00/dd57aeafcddb3adf4d5e57ab218693.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/0e/9bed3c40765b5ab9057b1942fd547b.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/0e/9bed3c40765b5ab9057b1942fd547b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/13/56f59ef9c09b2b05813b364e6d0ba5.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/13/56f59ef9c09b2b05813b364e6d0ba5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/14/8b0404e293a2c42fc74921413fd48a.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/14/8b0404e293a2c42fc74921413fd48a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/14/e87cb54ef837a1e9082190e5c50d1a.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/14/e87cb54ef837a1e9082190e5c50d1a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/16/eb931b3220a8232f3f93a883fc73d4.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/16/eb931b3220a8232f3f93a883fc73d4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/17/37a11c69e52b4abef51deebbd35467.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/17/37a11c69e52b4abef51deebbd35467.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/1b/1c06d50dad8b67ccbccbcf78f46c26.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/1b/1c06d50dad8b67ccbccbcf78f46c26.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/1c/30519c71ffda0311cca97d2796882d.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/1c/30519c71ffda0311cca97d2796882d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/27/61f43691b2e59a1a3f4f7527fe1b2d.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/27/61f43691b2e59a1a3f4f7527fe1b2d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/32/e8ab5b89de3cb535b67a0c0064ab55.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/32/e8ab5b89de3cb535b67a0c0064ab55.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/37/ef8b9008ba5144d63b078e313ed143.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/37/ef8b9008ba5144d63b078e313ed143.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/39/c174a291895a03fead07464a2058dc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/39/c174a291895a03fead07464a2058dc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/3a/198ad2d2de7b3712ca75db0b29e9c6.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/3a/198ad2d2de7b3712ca75db0b29e9c6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/3b/2ca4c725bb8ccb41ee8fc80488cf58.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/3b/2ca4c725bb8ccb41ee8fc80488cf58.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/3b/2e0432627dedc7144530c9205ee11c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/3b/2e0432627dedc7144530c9205ee11c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/3c/95482f150740d8088bcfb808f4c511.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/3c/95482f150740d8088bcfb808f4c511.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/3f/3ec765604ad77d1fc835adc4ea4a74.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/3f/3ec765604ad77d1fc835adc4ea4a74.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/40/0fcaf70b7f57ed61ecc74555a16592.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/40/0fcaf70b7f57ed61ecc74555a16592.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/44/3c4602177e8664791da06e3c047680.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/44/3c4602177e8664791da06e3c047680.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/44/7c8910c5b18e32665d5c556536b7c7.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/44/7c8910c5b18e32665d5c556536b7c7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/48/4f4b73851fce2e0f486b533929a517.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/48/4f4b73851fce2e0f486b533929a517.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/4a/ac7de0da3ec81c8a25aaedf1b57bd6.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/4a/ac7de0da3ec81c8a25aaedf1b57bd6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/51/280106f71a65b3bb68d4a83d5b9703.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/51/280106f71a65b3bb68d4a83d5b9703.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/58/2c1b96b2b5846a1dedf696d1e0e954.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/58/2c1b96b2b5846a1dedf696d1e0e954.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/59/1c3da22605c9a378d33518af2efa22.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/59/1c3da22605c9a378d33518af2efa22.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/59/b900eaeff02a400303ce675f5441e7.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/59/b900eaeff02a400303ce675f5441e7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/5a/f804ddd35c74b0ee35b106fd937306.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/5a/f804ddd35c74b0ee35b106fd937306.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/5e/49899432ca725676bfde86a51ad335.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/5e/49899432ca725676bfde86a51ad335.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/5e/67ad1976b334e0efca054151704635.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/5e/67ad1976b334e0efca054151704635.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/62/9e501ad67b02ce59c574b5f1bad40e.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/62/9e501ad67b02ce59c574b5f1bad40e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/64/8c0d869dd1c028a3475c7a82ba748f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/64/8c0d869dd1c028a3475c7a82ba748f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/67/e8d2c5783a69b7cf2caef686452a13.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/67/e8d2c5783a69b7cf2caef686452a13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/70/4aa1d58a2fd90e2ea28101b8eb43f1.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/70/4aa1d58a2fd90e2ea28101b8eb43f1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/77/0e70512eec12e3adc2db9acfdc3335.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/77/0e70512eec12e3adc2db9acfdc3335.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/77/dfe70cff4a2f5ad4524d427b7a75ad.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/77/dfe70cff4a2f5ad4524d427b7a75ad.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/7f/39869a308f72619d505c8ac5dc8490.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/7f/39869a308f72619d505c8ac5dc8490.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/83/88e83fe3a599615135468b9ee86a68.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/83/88e83fe3a599615135468b9ee86a68.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/84/957033aed57498d232fb231748d5ce.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/84/957033aed57498d232fb231748d5ce.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/87/68a10c29d813be2aec948a4a100f76.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/87/68a10c29d813be2aec948a4a100f76.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/8c/424aac781a499ea910c8b98adddd0f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/8c/424aac781a499ea910c8b98adddd0f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/91/355b49aa9f5b1c2bb16650f895f3cf.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/91/355b49aa9f5b1c2bb16650f895f3cf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/93/41b5fcaa365b2af3c97b27b1cf5be4.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/93/41b5fcaa365b2af3c97b27b1cf5be4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/94/1128175ed21326d207b8bd1cee8c53.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/94/1128175ed21326d207b8bd1cee8c53.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/94/62be8af887b1f88a80064446d8c561.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/94/62be8af887b1f88a80064446d8c561.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/95/777059934aa95b95e136e452f56c46.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/95/777059934aa95b95e136e452f56c46.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/9b/593e81e3b4d9128bd72fb676ceb608.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/9b/593e81e3b4d9128bd72fb676ceb608.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/9f/b91f2991aedb196047fc22cbe6227d.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/9f/b91f2991aedb196047fc22cbe6227d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/a3/314256479f0978d8d44f78d741240a.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/a3/314256479f0978d8d44f78d741240a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/a5/e1d39a598797715a34dc463ff1aeb5.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/a5/e1d39a598797715a34dc463ff1aeb5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/a6/a5598b9faf3b1ee04956821b9ff5fb.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/a6/a5598b9faf3b1ee04956821b9ff5fb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/a8/0530a1d7cebc0e58af0d99151e3cc3.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/a8/0530a1d7cebc0e58af0d99151e3cc3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ab/9657653a8c3b3490551b9952dbf6fb.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ab/9657653a8c3b3490551b9952dbf6fb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ac/5504ca438805662be61a0d7af4b7c0.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ac/5504ca438805662be61a0d7af4b7c0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/af/14fcc958e78ae90cd6e846b564b0ac.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/af/14fcc958e78ae90cd6e846b564b0ac.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/b4/11e992c48f8fa5bd77e0ed19146a9d.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/b4/11e992c48f8fa5bd77e0ed19146a9d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/b5/d90af36951b557b03e68eaac8aa335.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/b5/d90af36951b557b03e68eaac8aa335.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/b6/56126b57dd271eec997b8c353d2404.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/b6/56126b57dd271eec997b8c353d2404.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/b6/ee60e298162e57be382aa93833a95f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/b6/ee60e298162e57be382aa93833a95f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/b9/a3741f4b734a4ad43b2983ef15f228.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/b9/a3741f4b734a4ad43b2983ef15f228.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ba/fa2ff09bd8ecf53a18d0f852da5819.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ba/fa2ff09bd8ecf53a18d0f852da5819.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/bc/674c17bba09c563b9720e76ae1d63c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/bc/674c17bba09c563b9720e76ae1d63c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/be/4b0f9af13168cc1849b37190967ff2.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/be/4b0f9af13168cc1849b37190967ff2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/be/914d3887e54fc3a6727e669199d6b4.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/be/914d3887e54fc3a6727e669199d6b4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/bf/7b2722d22962f2e5113d37578b4315.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/bf/7b2722d22962f2e5113d37578b4315.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/c0/22cf3bc2a167c47d0677966a87e3eb.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/c0/22cf3bc2a167c47d0677966a87e3eb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/c5/99826806163e9cc548ffd794e8b1fa.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/c5/99826806163e9cc548ffd794e8b1fa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/c9/347d64cf8828385265750d8b804558.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/c9/347d64cf8828385265750d8b804558.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/c9/c696c280f2a30df18f84fd91d044f3.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/c9/c696c280f2a30df18f84fd91d044f3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ce/4723dea9bfbd83c03b0c01811c5f64.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ce/4723dea9bfbd83c03b0c01811c5f64.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/d2/5c6953486c3144a1ff4c192b8ec687.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/d2/5c6953486c3144a1ff4c192b8ec687.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/d7/cc9eb7760fd3e6e7290e653ef313f8.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/d7/cc9eb7760fd3e6e7290e653ef313f8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/e0/e5a2c182f686fb516b42a152b1cbaf.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/e0/e5a2c182f686fb516b42a152b1cbaf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/e1/e633ac19dd4ddf5a904df3f4f55647.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/e1/e633ac19dd4ddf5a904df3f4f55647.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/e4/f26ca18bb07e01182ba21b9126e19e.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/e4/f26ca18bb07e01182ba21b9126e19e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/e7/b3229b4bfae88453365fe476380397.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/e7/b3229b4bfae88453365fe476380397.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/e9/70080234cf3615d34e081aff24830b.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/e9/70080234cf3615d34e081aff24830b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ef/7df9f931806b78a62d9c5b4393761e.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ef/7df9f931806b78a62d9c5b4393761e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f0/8ca3d56346fe8ac0f17900ff8d1248.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f0/8ca3d56346fe8ac0f17900ff8d1248.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f2/7fbce9831209f32d88c55a811d6f40.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f2/7fbce9831209f32d88c55a811d6f40.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f6/2dcb9da7c2ab3dac9d0994fa191e0b.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f6/2dcb9da7c2ab3dac9d0994fa191e0b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f6/dcab1b3f9c962c70d7a09601684b95.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f6/dcab1b3f9c962c70d7a09601684b95.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f8/c862d675fc995e29533d62b3cb96cb.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f8/c862d675fc995e29533d62b3cb96cb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/fc/4786b44c10ee8ba320a26c3752fe57.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/fc/4786b44c10ee8ba320a26c3752fe57.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/fc/7ddcc0f4f33552b5c804d0c27a8fb7.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/fc/7ddcc0f4f33552b5c804d0c27a8fb7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/studentController/studentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/studentController/studentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/studentSchema/studentSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/studentSchema/studentSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public.78399e21.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/public.78399e21.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public.78399e21.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/public.78399e21.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Components/Navbar/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Components/Navbar/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Components/all_courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Components/all_courses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Components/enroll_to_course.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Components/enroll_to_course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Components/enrolledCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Components/enrolledCourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Components/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Components/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Components/specializations.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Components/specializations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Components/studentHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/Components/studentHome.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Components/studentLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Components/studentLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Components/studentregister.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Components/studentregister.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,55 +119,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/studentController/studentController.js">
+        <entry file="file://$PROJECT_DIR$/public/Components/studentLogin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="152" column="37" selection-start-line="152" selection-start-column="37" selection-end-line="152" selection-end-column="37" />
+            <state relative-caret-position="215">
+              <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/studentRepository/studentRepository.js">
+        <entry file="file://$PROJECT_DIR$/public/Components/studentHome.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            <state relative-caret-position="161">
+              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/studentRepository/studentLogin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-515">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/studentRepository/assignmentUpload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/Components/enroll_to_course.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="170">
+              <caret line="15" column="107" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="107" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -86,10 +152,67 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/Components/enrolledCourses.js">
+        <entry file="file://$PROJECT_DIR$/public/Components/Navbar/navbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="37" column="70" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
+            <state relative-caret-position="238">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/Components/studentregister.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="151" column="49" selection-start-line="151" selection-start-column="49" selection-end-line="151" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/Components/homeloginregister.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/Components/profile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1037">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/Components/all_courses.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="47" column="49" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="49" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -100,25 +223,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/Components/selectedCourse.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1153">
-              <caret line="85" column="76" selection-start-line="85" selection-start-column="76" selection-end-line="85" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/Components/ImageUploader.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/Components/FileUploader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+            <state relative-caret-position="-221">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -144,25 +250,28 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/Components/courseModule.js" />
         <option value="$PROJECT_DIR$/public/Components/courseProfile.js" />
-        <option value="$PROJECT_DIR$/public/Components/Navbar/navbar.js" />
-        <option value="$PROJECT_DIR$/public/Components/specializations.js" />
-        <option value="$PROJECT_DIR$/app/studentSchema/studentSchema.js" />
         <option value="$PROJECT_DIR$/app/studentRepository/enrolledCourses.js" />
-        <option value="$PROJECT_DIR$/public/Components/enrolledCourses.js" />
         <option value="$PROJECT_DIR$/app/studentRepository/studentRepository.js" />
         <option value="$PROJECT_DIR$/public/Components/uploadfileto.js" />
-        <option value="$PROJECT_DIR$/app/studentController/studentController.js" />
         <option value="$PROJECT_DIR$/app/studentRepository/assignmentUpload.js" />
         <option value="$PROJECT_DIR$/public/Components/FileUploader.js" />
         <option value="$PROJECT_DIR$/app/studentRepository/studentLogin.js" />
         <option value="$PROJECT_DIR$/public/Components/profileRegister.js" />
+        <option value="$PROJECT_DIR$/public/Components/selectedCourse.js" />
+        <option value="$PROJECT_DIR$/public/App.jsx" />
+        <option value="$PROJECT_DIR$/public/Components/enroll_to_course.js" />
+        <option value="$PROJECT_DIR$/app/studentController/studentController.js" />
+        <option value="$PROJECT_DIR$/app/studentSchema/studentSchema.js" />
+        <option value="$PROJECT_DIR$/public/Components/all_courses.js" />
+        <option value="$PROJECT_DIR$/public/Components/specializations.js" />
+        <option value="$PROJECT_DIR$/public/Components/enrolledCourses.js" />
+        <option value="$PROJECT_DIR$/public/Components/profile.js" />
+        <option value="$PROJECT_DIR$/public/Components/Navbar/navbar.js" />
+        <option value="$PROJECT_DIR$/public/Components/studentHome.jsx" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/Components/homeloginregister.js" />
         <option value="$PROJECT_DIR$/public/Components/studentregister.js" />
         <option value="$PROJECT_DIR$/public/Components/studentLogin.js" />
-        <option value="$PROJECT_DIR$/public/Components/profile.js" />
-        <option value="$PROJECT_DIR$/public/Components/selectedCourse.js" />
-        <option value="$PROJECT_DIR$/public/Components/all_courses.js" />
-        <option value="$PROJECT_DIR$/public/Components/enroll_to_course.js" />
-        <option value="$PROJECT_DIR$/public/App.jsx" />
       </list>
     </option>
   </component>
@@ -180,7 +289,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,12 +300,6 @@
               <item name="AF-Student-Instructor-System" type="b2602c69:ProjectViewProjectNode" />
               <item name="AF-Student-Instructor-System" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AF-Student-Instructor-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AF-Student-Instructor-System" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AF-Student-Instructor-System" type="b2602c69:ProjectViewProjectNode" />
@@ -235,21 +337,17 @@
               <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="Navbar" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="AF-Student-Instructor-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AF-Student-Instructor-System" type="462c0819:PsiDirectoryNode" />
-              <item name="uploads" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mern-file-upload" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -286,11 +384,13 @@
       <updated>1561014192903</updated>
       <workItem from="1561014195117" duration="8353000" />
       <workItem from="1561088105586" duration="97966000" />
+      <workItem from="1561307767218" duration="10586000" />
+      <workItem from="1561318418938" duration="4519000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106319000" />
+    <option name="totallyTimeSpent" value="121424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -344,6 +444,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -377,36 +491,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="334" column="11" selection-start-line="334" selection-start-column="11" selection-end-line="334" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="424" column="10" selection-start-line="424" selection-start-column="10" selection-end-line="424" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Sachith/course.Schema/CourseSchema.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://D:/Sachith/course.Schema/CourseTest.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://D:/Sachith/course.Schema/course.Schema/CourseTest.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://D:/Sachith/course.Schema/course.Schema/CourseSchema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3111">
-          <caret line="183" column="33" selection-start-line="183" selection-start-column="33" selection-end-line="183" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js" />
+    <entry file="file://D:/Sachith/course.Schema/CourseSchema.js" />
+    <entry file="file://D:/Sachith/course.Schema/CourseTest.js" />
+    <entry file="file://D:/Sachith/course.Schema/course.Schema/CourseTest.js" />
+    <entry file="file://D:/Sachith/course.Schema/course.Schema/CourseSchema.js" />
     <entry file="file://$PROJECT_DIR$/public/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -414,16 +504,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uploads/2019-06-22T07-52-20.405Z45340094_1921500451303870_1484247715750608896_n.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/2019-06-22T07-52-20.405Z45340094_1921500451303870_1484247715750608896_n.jpg" />
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -438,20 +519,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/error/missingSchema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/InstructorSchema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="256" selection-start-line="256" selection-end-line="264" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/error/missingSchema.js" />
+    <entry file="file://E:/InstructorSchema.js" />
     <entry file="file://$PROJECT_DIR$/app/routes/message.server.routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -498,77 +567,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/Components/Navbar/navbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uploads/2019-06-23T06-43-56.825Z20171002_181031.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/studentSchema/studentSchema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/studentRepository/enrolledCourses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-915">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/2019-06-23T06-43-56.825Z20171002_181031.jpg" />
     <entry file="file://$PROJECT_DIR$/public/Components/uploadfileto.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Components/profileRegister.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Components/studentregister.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3094">
-          <caret line="182" column="30" selection-start-line="182" selection-start-column="30" selection-end-line="184" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Components/studentHome.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Components/studentLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Components/profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="106" selection-start-line="12" selection-start-column="106" selection-end-line="12" selection-end-column="106" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -586,105 +589,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/app/studentRepository/assignmentUpload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Components/specializations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Components/all_courses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/App.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="48" column="77" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/studentController/studentController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="152" column="37" selection-start-line="152" selection-start-column="37" selection-end-line="152" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/studentRepository/studentRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        <state relative-caret-position="357">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="238">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/studentRepository/studentLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-515">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/studentRepository/assignmentUpload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Components/enroll_to_course.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Components/enrolledCourses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="37" column="70" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Components/selectedCourse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1153">
-          <caret line="85" column="76" selection-start-line="85" selection-start-column="76" selection-end-line="85" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,8 +608,178 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/Components/FileUploader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="110">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/studentRepository/studentLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/studentRepository/enrolledCourses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="61" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/profileRegister.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="42" column="67" selection-start-line="33" selection-start-column="26" selection-end-line="42" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/studentController/studentController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="153" column="34" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/studentSchema/studentSchema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/studentRepository/studentRepository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/enrolledCourses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/specializations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="39" column="26" selection-start-line="29" selection-start-column="16" selection-end-line="39" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1037">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/studentHome.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/Navbar/navbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/homeloginregister.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/studentregister.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="151" column="49" selection-start-line="151" selection-start-column="49" selection-end-line="151" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/studentLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/selectedCourse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/all_courses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="47" column="49" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Components/enroll_to_course.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="107" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="107" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

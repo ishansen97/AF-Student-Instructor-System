@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-export const STUDENT_SESSION = "SESSION";
+export const STUDENT_SESSION = "";
 
 class StudentLogin extends Component{
     constructor(props) {
@@ -29,7 +29,7 @@ class StudentLogin extends Component{
             if(result[0].studentPassword === this.state.password){
                 // alert('logged in')
                 sessionStorage.setItem(STUDENT_SESSION,result[0].studentID)
-                this.props.history.push(`/`)
+                this.props.history.push(`/student_home`)
             }else{
                 alert("try again")
             }
@@ -48,12 +48,14 @@ class StudentLogin extends Component{
               </div>
               <div className="form-group">
                   <label htmlFor="exampleInputEmail1">Password</label>
-                  <input type="text" className="form-control" id="exampleInputEmail1"
+                  <input type="password" className="form-control" id="exampleInputEmail1"
                          aria-describedby="emailHelp" placeholder="Enter Password"
                          onChange={e => this.setPassword(e)}/>
               </div>
-              <button type="submit" className="btn btn-primary"
-                      onClick={e => this.login(e)}>Login</button>
+              <button type="submit" className="btn btn-secondary btn-lg btn-block"
+                      onClick={e => this.login(e)}>Login</button><br/>
+
+              <a href="http://localhost:4000/student_register">Not a student?</a>
               {/*<input type="text" placeholder="Username" value={this.state.userName} onChange={e => this.setUserName(e)}/>*/}
               {/*<input type="password" placeholder="Password" onChange={e => this.setPassword(e)}/>*/}
               {/*<button onClick={e => this.login(e)}>Login</button>*/}

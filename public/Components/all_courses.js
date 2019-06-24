@@ -43,8 +43,9 @@ class AllCourses extends Component {
               sessionStorage.setItem(COURSE_SELECTED, enrldcrss.courseID);
               this.props.history.push(`/selected_course`)
           }else{
-              sessionStorage.setItem(COURSE_SELECTED_TO_ENROLL, enrldcrss.courseID);
-              this.props.history.push(`/enroll_to_course`)
+              console.log(enrldcrss.courseID);
+              sessionStorage.setItem(COURSE_SELECTED_TO_ENROLL, e.target.value);
+              this.props.history.push(`/enroll_to`)
           }
         }
         );
@@ -55,10 +56,19 @@ class AllCourses extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <h2>Courses</h2>
+                <h1 className="card-header bg-dark text-white">Courses</h1>
                 {this.state.allCourses.map(specs =>
-                    <div>
-                        <button onClick={e => {this.courseClick(e)}} value={specs._id} className="btn btn-info">{specs.courseName}</button>
+                    <div  className="">
+                        <button type="button"
+                                className="btn btn-secondary btn-lg btn-block"
+                                onClick={e => {this.courseClick(e)}} value={specs._id}>
+                            {specs.courseName}
+                        </button>
+                        {/*<button*/}
+                            {/*onClick={e => {this.courseClick(e)}} value={specs._id}*/}
+                            {/*className="btn btn-dark">{specs.courseName}</button>*/}
+                        {/*<li><i className="fas fa-book-open"*/}
+                               {/*style={{size: "9x"}}/> &nbsp;{specs.courseName}</li>*/}
                     </div>
                 )}
             </div>

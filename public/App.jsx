@@ -16,6 +16,7 @@ import AllCourses from "./Components/all_courses";
 import SelectedCourse from "./Components/selectedCourse";
 import ProfileRegister from "./Components/profileRegister";
 import EnrollToCourse from "./Components/enroll_to_course";
+import HomeLoginregister from "./Components/homeloginregister";
 
 export default class App extends Component {
     constructor(props) {
@@ -41,12 +42,13 @@ export default class App extends Component {
             <div className="App">
                 <BrowserRouter>
                     <NavBar/>
-                    <Route path="/" component={Home} exact/>
+                    <Route path="/" component={HomeLoginregister} exact/>
+                    <Route path="/student_home" component={Home} />
                     <Route path="/course" component={Course}/>
                     <Route path="/selected_course" component={SelectedCourse}/>
                     <Route path="/enroll_to_course" component={AllCourses}/>
                     <Route path="/all_courses" component={AllCourses}/>
-                    <Route path="/enroll_to_course" component={EnrollToCourse}/>
+                    <Route path="/enroll_to" component={EnrollToCourse}/>
                     <Route path="/student_register" component={StudentRegister}/>
                     <Route path="/student_profile" component={Profile}/>
                     <Route path="/module" component={CourseModule}/>

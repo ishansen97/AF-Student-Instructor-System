@@ -40872,7 +40872,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var STUDENT_SESSION = "SESSION";
+var STUDENT_SESSION = "";
 exports.STUDENT_SESSION = STUDENT_SESSION;
 
 var StudentLogin =
@@ -40922,7 +40922,7 @@ function (_Component) {
           // alert('logged in')
           sessionStorage.setItem(STUDENT_SESSION, result[0].studentID);
 
-          _this2.props.history.push("/");
+          _this2.props.history.push("/student_home");
         } else {
           alert("try again");
         }
@@ -40952,7 +40952,7 @@ function (_Component) {
       }, _react.default.createElement("label", {
         htmlFor: "exampleInputEmail1"
       }, "Password"), _react.default.createElement("input", {
-        type: "text",
+        type: "password",
         className: "form-control",
         id: "exampleInputEmail1",
         "aria-describedby": "emailHelp",
@@ -40962,11 +40962,13 @@ function (_Component) {
         }
       })), _react.default.createElement("button", {
         type: "submit",
-        className: "btn btn-primary",
+        className: "btn btn-secondary btn-lg btn-block",
         onClick: function onClick(e) {
           return _this3.login(e);
         }
-      }, "Login"));
+      }, "Login"), _react.default.createElement("br", null), _react.default.createElement("a", {
+        href: "http://localhost:4000/student_register"
+      }, "Not a student?"));
     }
   }]);
 
@@ -41021,7 +41023,9 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Profile).call(this, props));
     _this.state = {
-      studentDetails: []
+      studentDetails: [],
+      emailE: "none",
+      mobileE: "none"
     };
     return _this;
   }
@@ -41030,6 +41034,11 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
+
+      if (sessionStorage.getItem(_studentLogin.STUDENT_SESSION) === null) {
+        alert("not logged");
+        this.props.history.push("/");
+      }
 
       fetch('api/resources/student/find_student_by_student_id/' + sessionStorage.getItem(_studentLogin.STUDENT_SESSION)).then(function (data) {
         return data.json();
@@ -41044,19 +41053,99 @@ function (_Component) {
   }, {
     key: "editEmail",
     value: function editEmail(e) {
-      e.preventDefault();
-      alert('edit email');
+      e.preventDefault(); // alert('edit email');
+
+      if (this.state.emailE === "none") {
+        this.setState({
+          emailE: "block"
+        });
+      } else {
+        this.setState({
+          emailE: "none"
+        });
+      }
     }
   }, {
     key: "editMobile",
     value: function editMobile(e) {
-      e.preventDefault();
-      alert('edit mobile');
+      e.preventDefault(); // alert('edit mobile');
+
+      e.preventDefault(); // alert('edit email');
+
+      if (this.state.mobileE === "none") {
+        this.setState({
+          mobileE: "block"
+        });
+      } else {
+        this.setState({
+          mobileE: "none"
+        });
+      }
+    }
+  }, {
+    key: "updateEmail",
+    value: function updateEmail(e) {
+      var _this3 = this;
+
+      // e.preventDefault();
+      console.log("in edit upl");
+      fetch('api/resources/student/update_student_email', {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({
+          "studentID": sessionStorage.getItem(_studentLogin.STUDENT_SESSION),
+          "email": document.getElementById("editEmail").value
+        })
+      }).then(function (data) {
+        return data.json();
+      }).then(function (jsonData) {
+        console.log(jsonData);
+      }).catch(function (err) {
+        console.error(err);
+
+        _this3.setState({
+          mobileE: "none"
+        });
+
+        window.location.reload();
+      });
+    }
+  }, {
+    key: "updateMobile",
+    value: function updateMobile(e) {
+      var _this4 = this;
+
+      // e.preventDefault();
+      console.log("in edit upl");
+      fetch('api/resources/student/update_student_mobile', {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({
+          "studentID": sessionStorage.getItem(_studentLogin.STUDENT_SESSION),
+          "mobile": document.getElementById("editMobile").value
+        })
+      }).then(function (data) {
+        return data.json();
+      }).then(function (jsonData) {
+        console.log(jsonData);
+      }).catch(function (err) {
+        console.error(err);
+
+        _this4.setState({
+          emailE: "none"
+        });
+
+        window.location.reload();
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this5 = this;
 
       return _react.default.createElement("div", {
         className: "container"
@@ -41078,15 +41167,43 @@ function (_Component) {
       }, this.state.studentDetails.map(function (profile) {
         return _react.default.createElement("div", null, _react.default.createElement("h4", null, "Student ID : ", profile.studentID), _react.default.createElement("h4", null, "Student Name : ", profile.firstName, " ", profile.middleName, " ", profile.lastName), _react.default.createElement("h4", null, "Student Email : ", profile.email, "\xA0", _react.default.createElement("i", {
           onClick: function onClick(e) {
-            return _this3.editEmail(e);
+            return _this5.editEmail(e);
           },
           className: "fas fa-edit text-info"
-        })), _react.default.createElement("h4", null, "Student Mobile : ", profile.mobile, "\xA0", _react.default.createElement("i", {
+        })), _react.default.createElement("div", {
+          className: "card",
+          style: {
+            display: _this5.state.emailE
+          }
+        }, _react.default.createElement("input", {
+          type: "text",
+          id: "editEmail",
+          placeholder: "Enter an Email"
+        }), " \xA0\xA0", _react.default.createElement("button", {
+          className: "btn btn-warning",
           onClick: function onClick(e) {
-            _this3.editMobile(e);
+            return _this5.updateEmail(e);
+          }
+        }, "UPDATE")), _react.default.createElement("h4", null, "Student Mobile : ", profile.mobile, "\xA0", _react.default.createElement("i", {
+          onClick: function onClick(e) {
+            _this5.editMobile(e);
           },
           className: "fas fa-edit text-info"
-        })));
+        })), _react.default.createElement("div", {
+          className: "card",
+          style: {
+            display: _this5.state.mobileE
+          }
+        }, _react.default.createElement("input", {
+          type: "text",
+          id: "editMobile",
+          placeholder: "Enter an Mobile"
+        }), " \xA0\xA0", _react.default.createElement("button", {
+          className: "btn btn-warning",
+          onClick: function onClick(e) {
+            return _this5.updateMobile(e);
+          }
+        }, "UPDATE")));
       })))));
     }
   }]);
@@ -41109,6 +41226,8 @@ exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
+
+var _studentLogin = require("../studentLogin");
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
@@ -41135,19 +41254,50 @@ var NavBar =
 function (_Component) {
   _inherits(NavBar, _Component);
 
-  function NavBar() {
+  function NavBar(props) {
+    var _this;
+
     _classCallCheck(this, NavBar);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(NavBar).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(NavBar).call(this, props));
+    _this.state = {
+      logout: "none"
+    };
+    return _this;
   }
 
   _createClass(NavBar, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (sessionStorage.getItem(_studentLogin.STUDENT_SESSION) !== null) {
+        this.setState({
+          logout: "block"
+        });
+      } else {
+        this.setState({
+          logout: "none"
+        });
+      }
+    }
+  }, {
+    key: "signOut",
+    value: function signOut(e) {
+      e.preventDefault();
+      sessionStorage.removeItem(sessionStorage.getItem(_studentLogin.STUDENT_SESSION));
+      sessionStorage.clear();
+      alert('signed out' + sessionStorage.getItem(_studentLogin.STUDENT_SESSION));
+      this.props.history.push("/");
+      window.location.reload();
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return _react.default.createElement("nav", {
         className: "navbar navbar-expand-lg navbar-dark bg-secondary sticky-top"
       }, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/",
+        to: "/student_home",
         className: "navbar-brand",
         href: "#"
       }, _react.default.createElement("img", {
@@ -41170,15 +41320,6 @@ function (_Component) {
       }, _react.default.createElement("ul", {
         className: "navbar-nav m-auto"
       }, _react.default.createElement("li", {
-        className: "nav-item active"
-      }, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/area",
-        className: "nav-link text-white ml-4"
-      }, _react.default.createElement("i", {
-        className: "fas fa-user-graduate"
-      }), " \xA0 Student Corner ", _react.default.createElement("span", {
-        className: "sr-only"
-      }, "(current)"))), _react.default.createElement("li", {
         className: "nav-item"
       }, _react.default.createElement(_reactRouterDom.Link, {
         to: "/enrolledCourses",
@@ -41194,15 +41335,16 @@ function (_Component) {
         className: "fas fa-user-circle"
       }), " \xA0 Profile"))), _react.default.createElement("form", {
         className: "form-inline my-2 my-lg-0"
-      }, _react.default.createElement("input", {
-        className: "form-control mr-sm-2",
-        type: "search",
-        placeholder: "Search",
-        "aria-label": "Search"
-      }), _react.default.createElement("button", {
+      }, _react.default.createElement("button", {
+        style: {
+          display: this.state.logout
+        },
         className: "btn btn-outline-dark my-2 my-sm-0",
-        type: "submit"
-      }, "Search"))));
+        type: "submit",
+        onClick: function onClick(e) {
+          return _this2.signOut(e);
+        }
+      }, "Logout"))));
     }
   }]);
 
@@ -41211,7 +41353,7 @@ function (_Component) {
 
 var _default = NavBar;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../../images/aflogo.svg":"images/aflogo.svg"}],"../node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../studentLogin":"Components/studentLogin.js","../../images/aflogo.svg":"images/aflogo.svg"}],"../node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47124,6 +47266,8 @@ var _slide_3 = _interopRequireDefault(require("../images/slide_4.jpg"));
 
 require("../App.css");
 
+var _studentLogin = require("./studentLogin");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -47167,6 +47311,15 @@ function (_Component) {
   }
 
   _createClass(Home, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (sessionStorage.getItem(_studentLogin.STUDENT_SESSION) === null) {
+        alert('logged out');
+        this.props.history.push("/");
+      } else {// alert('your good');
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement("div", {
@@ -47211,7 +47364,7 @@ function (_Component) {
 
 var _default = Home;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./studentCalander":"Components/studentCalander.jsx","react-slideshow-image":"../node_modules/react-slideshow-image/lib/index.js","../images/slide_1.jpg":"images/slide_1.jpg","../images/slide_2.jpg":"images/slide_2.jpg","../images/slide_4.jpg":"images/slide_4.jpg","../App.css":"App.css"}],"Components/studentregister.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./studentCalander":"Components/studentCalander.jsx","react-slideshow-image":"../node_modules/react-slideshow-image/lib/index.js","../images/slide_1.jpg":"images/slide_1.jpg","../images/slide_2.jpg":"images/slide_2.jpg","../images/slide_4.jpg":"images/slide_4.jpg","../App.css":"App.css","./studentLogin":"Components/studentLogin.js"}],"Components/studentregister.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47379,6 +47532,8 @@ function (_Component) {
   }, {
     key: "registerMe",
     value: function registerMe(e) {
+      var _this3 = this;
+
       e.preventDefault();
       console.log(this.state.userName);
       console.log(this.state.password);
@@ -47418,16 +47573,16 @@ function (_Component) {
         console.log(jsonData);
       }).catch(function (err) {
         console.log(err);
+
+        _this3.props.history.push('/student_login');
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
-      return _react.default.createElement("div", {
-        className: "container-fluid"
-      }, _react.default.createElement("div", {
+      return _react.default.createElement("div", null, _react.default.createElement("div", {
         className: "card"
       }, _react.default.createElement("h2", {
         className: "card-header"
@@ -47435,14 +47590,16 @@ function (_Component) {
         type: "text",
         placeholder: "Student ID",
         onChange: function onChange(e) {
-          return _this3.studentIDSet(e);
+          return _this4.studentIDSet(e);
         }
       }), _react.default.createElement("button", {
         className: "btn btn-info",
         onClick: function onClick(e) {
-          return _this3.onCheck(e);
+          return _this4.onCheck(e);
         }
-      }, "Check")), _react.default.createElement("div", {
+      }, "Check"), _react.default.createElement("a", {
+        href: "http://localhost:4000/student_login"
+      }, "Already a student")), _react.default.createElement("div", {
         className: "card",
         style: {
           display: this.state.showRegister
@@ -47462,20 +47619,20 @@ function (_Component) {
         "aria-describedby": "emailHelp",
         placeholder: "Enter UserName",
         onChange: function onChange(e) {
-          _this3.userNameChange(e);
+          _this4.userNameChange(e);
         }
       })), _react.default.createElement("div", {
         className: "form-group"
       }, _react.default.createElement("label", {
         htmlFor: "exampleInputEmail1"
       }, "Password"), _react.default.createElement("input", {
-        type: "text",
+        type: "password",
         className: "form-control",
         id: "exampleInputEmail1",
         "aria-describedby": "emailHelp",
         placeholder: "Enter Password",
         onChange: function onChange(e) {
-          _this3.passwordChange(e);
+          _this4.passwordChange(e);
         }
       })), _react.default.createElement("div", {
         className: "form-group"
@@ -47488,7 +47645,7 @@ function (_Component) {
         "aria-describedby": "emailHelp",
         placeholder: "Enter First Name",
         onChange: function onChange(e) {
-          _this3.firstNameChange(e);
+          _this4.firstNameChange(e);
         }
       })), _react.default.createElement("div", {
         className: "form-group"
@@ -47501,7 +47658,7 @@ function (_Component) {
         "aria-describedby": "emailHelp",
         placeholder: "Enter Middle Name",
         onChange: function onChange(e) {
-          _this3.middleNameChange(e);
+          _this4.middleNameChange(e);
         }
       })), _react.default.createElement("div", {
         className: "form-group"
@@ -47514,7 +47671,7 @@ function (_Component) {
         "aria-describedby": "emailHelp",
         placeholder: "Enter Last Name",
         onChange: function onChange(e) {
-          _this3.lastNameChange(e);
+          _this4.lastNameChange(e);
         }
       })), _react.default.createElement("div", {
         className: "form-group"
@@ -47527,7 +47684,7 @@ function (_Component) {
         "aria-describedby": "emailHelp",
         placeholder: "Enter Email",
         onChange: function onChange(e) {
-          _this3.emailChange(e);
+          _this4.emailChange(e);
         }
       })), _react.default.createElement("div", {
         className: "form-group"
@@ -47540,13 +47697,13 @@ function (_Component) {
         "aria-describedby": "emailHelp",
         placeholder: "Enter Mobile",
         onChange: function onChange(e) {
-          _this3.mobileChange(e);
+          _this4.mobileChange(e);
         }
       })), _react.default.createElement("button", {
         type: "submit",
-        className: "btn btn-primary",
+        className: "btn btn-secondary btn-lg btn-block",
         onClick: function onClick(e) {
-          return _this3.registerMe(e);
+          return _this4.registerMe(e);
         }
       }, "Register"))));
     }
@@ -47643,6 +47800,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _studentLogin = require("./studentLogin");
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -47685,6 +47844,11 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
+      if (sessionStorage.getItem(_studentLogin.STUDENT_SESSION) === null) {
+        alert("not logged");
+        this.props.history.push("/");
+      }
+
       fetch('api/resources/student/get_all_faculties').then(function (response) {
         return response.json(); //  console.log("Getting to response")
       }).then(function (json) {
@@ -47708,22 +47872,25 @@ function (_Component) {
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement("div", {
         className: "container-fluid"
-      }, _react.default.createElement("h1", null, "Faculties"), _react.default.createElement("hr", null), this.state.courses.map(function (item) {
+      }, _react.default.createElement("h1", {
+        className: "card-header bg-dark text-white"
+      }, "Faculties"), this.state.courses.map(function (item) {
         return _react.default.createElement("div", {
-          className: "card-header alert-dark"
+          className: ""
         }, _react.default.createElement(_reactRouterDom.Link, {
+          style: {
+            textDecoration: "none"
+          },
           to: {
             pathname: "/specializations",
             moduleProps: {
               item: item
             }
           }
-        }, _react.default.createElement("li", null, _react.default.createElement("i", {
-          className: "fas fa-book-open",
-          style: {
-            size: "9x"
-          }
-        }), " \xA0", item.name)));
+        }, _react.default.createElement("button", {
+          type: "button",
+          className: "btn btn-secondary btn-lg btn-block"
+        }, item.name)));
       })));
     }
   }]);
@@ -47733,7 +47900,7 @@ function (_Component) {
 
 var _default = EnrolledCourses;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"Components/specializations.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./studentLogin":"Components/studentLogin.js"}],"Components/specializations.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47805,20 +47972,25 @@ function (_Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "container-fluid"
-      }, _react.default.createElement("h2", null, "Specializations"), this.state.specializationsArr.map(function (specs) {
-        return _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
+      }, _react.default.createElement("h1", {
+        className: "card-header bg-dark text-white"
+      }, "Specializations"), this.state.specializationsArr.map(function (specs) {
+        return _react.default.createElement("div", {
+          className: ""
+        }, _react.default.createElement(_reactRouterDom.Link, {
+          style: {
+            textDecoration: "none"
+          },
           to: {
             pathname: "/all_courses",
             moduleProps: {
               specs: specs
             }
           }
-        }, _react.default.createElement("li", null, _react.default.createElement("i", {
-          className: "fas fa-book-open",
-          style: {
-            size: "9x"
-          }
-        }), " \xA0", specs.name)));
+        }, _react.default.createElement("button", {
+          type: "button",
+          className: "btn btn-secondary btn-lg btn-block"
+        }, specs.name)));
       }));
     }
   }]);
@@ -47929,9 +48101,10 @@ function (_Component) {
 
           _this3.props.history.push("/selected_course");
         } else {
-          sessionStorage.setItem(COURSE_SELECTED_TO_ENROLL, enrldcrss.courseID);
+          console.log(enrldcrss.courseID);
+          sessionStorage.setItem(COURSE_SELECTED_TO_ENROLL, e.target.value);
 
-          _this3.props.history.push("/enroll_to_course");
+          _this3.props.history.push("/enroll_to");
         }
       });
       console.log(e.target.value);
@@ -47943,13 +48116,18 @@ function (_Component) {
 
       return _react.default.createElement("div", {
         className: "container-fluid"
-      }, _react.default.createElement("h2", null, "Courses"), this.state.allCourses.map(function (specs) {
-        return _react.default.createElement("div", null, _react.default.createElement("button", {
+      }, _react.default.createElement("h1", {
+        className: "card-header bg-dark text-white"
+      }, "Courses"), this.state.allCourses.map(function (specs) {
+        return _react.default.createElement("div", {
+          className: ""
+        }, _react.default.createElement("button", {
+          type: "button",
+          className: "btn btn-secondary btn-lg btn-block",
           onClick: function onClick(e) {
             _this4.courseClick(e);
           },
-          value: specs._id,
-          className: "btn btn-info"
+          value: specs._id
         }, specs.courseName));
       }));
     }
@@ -48269,6 +48447,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _all_courses = require("./all_courses");
 
+var _studentLogin = require("./studentLogin");
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -48301,15 +48481,83 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(EnrollToCourse).call(this, props));
     _this.state = {
-      courseID: sessionStorage.getItem(_all_courses.COURSE_SELECTED_TO_ENROLL)
+      courseID: sessionStorage.getItem(_all_courses.COURSE_SELECTED_TO_ENROLL),
+      courseToEnroll: [],
+      studentID: sessionStorage.getItem(_studentLogin.STUDENT_SESSION)
     };
     return _this;
   }
 
   _createClass(EnrollToCourse, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('api/resources/student/get_course_details/' + sessionStorage.getItem(_all_courses.COURSE_SELECTED_TO_ENROLL)).then(function (data) {
+        return data.json();
+      }).then(function (jsonData) {
+        _this2.setState({
+          courseToEnroll: jsonData
+        });
+      }).catch(function (err) {
+        console.error(err);
+      });
+    }
+  }, {
+    key: "enrollME",
+    value: function enrollME(e) {
+      var _this3 = this;
+
+      e.preventDefault();
+      console.log(document.getElementById("enrolmentkey").value);
+      this.state.courseToEnroll.map(function (coursecheck) {
+        if (coursecheck.enrollmentKey === document.getElementById("enrolmentkey").value) {
+          alert('enrolled ' + _this3.state.studentID);
+          fetch('api/resources/student/enroll_to_courses', {
+            method: "POST",
+            headers: {
+              "content-type": "application/json"
+            },
+            body: JSON.stringify({
+              "studentID": _this3.state.studentID,
+              "courseID": coursecheck._id
+            })
+          }).then(function (data) {
+            return data.json();
+          }).then(function (jsonData) {
+            console.log(jsonData);
+          }).catch(function (err) {
+            console.error(err);
+            alert('successfully enrolled!');
+
+            _this3.props.history.push('/enrolledCourses');
+          });
+        } else {
+          alert('please enter correct key');
+        }
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h1", null, "hi"));
+      var _this4 = this;
+
+      return _react.default.createElement("div", null, this.state.courseToEnroll.map(function (course) {
+        return _react.default.createElement("div", {
+          className: "card"
+        }, _react.default.createElement("h2", {
+          className: "card-header"
+        }, course.courseName), _react.default.createElement("input", {
+          id: "enrolmentkey",
+          type: "text",
+          placeholder: "Enrolment Key"
+        }), _react.default.createElement("button", {
+          onClick: function onClick(e) {
+            _this4.enrollME(e);
+          },
+          className: "btn btn-warning"
+        }, "Submit"));
+      }));
     }
   }]);
 
@@ -48318,7 +48566,89 @@ function (_Component) {
 
 var _default = EnrollToCourse;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./all_courses":"Components/all_courses.js"}],"App.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./all_courses":"Components/all_courses.js","./studentLogin":"Components/studentLogin.js"}],"Components/homeloginregister.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var HomeLoginregister =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(HomeLoginregister, _Component);
+
+  function HomeLoginregister() {
+    _classCallCheck(this, HomeLoginregister);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(HomeLoginregister).apply(this, arguments));
+  }
+
+  _createClass(HomeLoginregister, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        className: "container-fluid",
+        style: {
+          height: "100%"
+        }
+      }, _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("h1", {
+        className: "card-header bg-dark text-white"
+      }, "WELCOME !"), _react.default.createElement("div", {
+        className: ""
+      }, _react.default.createElement(_reactRouterDom.Link, {
+        style: {
+          textDecoration: "none"
+        },
+        to: "/student_login"
+      }, _react.default.createElement("button", {
+        type: "button",
+        className: "btn btn-secondary btn-lg btn-block"
+      }, "Login")), _react.default.createElement("div", {
+        className: ""
+      }, _react.default.createElement(_reactRouterDom.Link, {
+        style: {
+          textDecoration: "none"
+        },
+        to: "/student_register"
+      }, _react.default.createElement("button", {
+        type: "button",
+        className: "btn btn-secondary btn-lg btn-block"
+      }, "Register")))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null));
+    }
+  }]);
+
+  return HomeLoginregister;
+}(_react.Component);
+
+var _default = HomeLoginregister;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"App.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -48359,6 +48689,8 @@ var _selectedCourse = _interopRequireDefault(require("./Components/selectedCours
 var _profileRegister = _interopRequireDefault(require("./Components/profileRegister"));
 
 var _enroll_to_course = _interopRequireDefault(require("./Components/enroll_to_course"));
+
+var _homeloginregister = _interopRequireDefault(require("./Components/homeloginregister"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -48425,8 +48757,11 @@ function (_Component) {
         className: "App"
       }, _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_navbar.default, null), _react.default.createElement(_reactRouterDom.Route, {
         path: "/",
-        component: _studentHome.default,
+        component: _homeloginregister.default,
         exact: true
+      }), _react.default.createElement(_reactRouterDom.Route, {
+        path: "/student_home",
+        component: _studentHome.default
       }), _react.default.createElement(_reactRouterDom.Route, {
         path: "/course",
         component: _course.default
@@ -48440,7 +48775,7 @@ function (_Component) {
         path: "/all_courses",
         component: _all_courses.default
       }), _react.default.createElement(_reactRouterDom.Route, {
-        path: "/enroll_to_course",
+        path: "/enroll_to",
         component: _enroll_to_course.default
       }), _react.default.createElement(_reactRouterDom.Route, {
         path: "/student_register",
@@ -48474,7 +48809,7 @@ function (_Component) {
 }(_react.Component);
 
 exports.default = App;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Components/course":"Components/course.js","./Components/courseModule":"Components/courseModule.js","./Components/profile":"Components/profile.js","./App.css":"App.css","./Components/Navbar/navbar":"Components/Navbar/navbar.js","./Components/studentHome":"Components/studentHome.jsx","./Components/studentregister":"Components/studentregister.js","./Components/uploadfileto":"Components/uploadfileto.js","./Components/studentLogin":"Components/studentLogin.js","./Components/enrolledCourses":"Components/enrolledCourses.js","./Components/specializations":"Components/specializations.js","./Components/all_courses":"Components/all_courses.js","./Components/selectedCourse":"Components/selectedCourse.js","./Components/profileRegister":"Components/profileRegister.js","./Components/enroll_to_course":"Components/enroll_to_course.js"}],"index.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Components/course":"Components/course.js","./Components/courseModule":"Components/courseModule.js","./Components/profile":"Components/profile.js","./App.css":"App.css","./Components/Navbar/navbar":"Components/Navbar/navbar.js","./Components/studentHome":"Components/studentHome.jsx","./Components/studentregister":"Components/studentregister.js","./Components/uploadfileto":"Components/uploadfileto.js","./Components/studentLogin":"Components/studentLogin.js","./Components/enrolledCourses":"Components/enrolledCourses.js","./Components/specializations":"Components/specializations.js","./Components/all_courses":"Components/all_courses.js","./Components/selectedCourse":"Components/selectedCourse.js","./Components/profileRegister":"Components/profileRegister.js","./Components/enroll_to_course":"Components/enroll_to_course.js","./Components/homeloginregister":"Components/homeloginregister.js"}],"index.jsx":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -48516,7 +48851,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49497" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57828" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
